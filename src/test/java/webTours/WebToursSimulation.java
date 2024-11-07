@@ -4,13 +4,18 @@ import java.util.*;
 
 import io.gatling.javaapi.core.*;
 import io.gatling.javaapi.http.*;
-import io.gatling.javaapi.jdbc.*;
 
 import static io.gatling.javaapi.core.CoreDsl.*;
 import static io.gatling.javaapi.http.HttpDsl.*;
-import static io.gatling.javaapi.jdbc.JdbcDsl.*;
 
 public class WebToursSimulation extends Simulation {
+
+  private static final int CLICK_THINK_TIME = 3;
+  private static final int FORM_THINK_TIME = 8;
+  private static final int RAMP_UP_TIME = 10;
+  private static final int HOLD_LOAD_TIME = 10;
+
+  FeederBuilder<String> feeder = csv("users_input_data.csv").circular();
 
   private HttpProtocolBuilder httpProtocol = http
     .baseUrl("http://localhost:1080")
@@ -21,7 +26,7 @@ public class WebToursSimulation extends Simulation {
     .upgradeInsecureRequestsHeader("1")
     .userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36");
 
-  FeederBuilder<String> feeder = csv("users_input_data.csv").circular();
+
   private Map<CharSequence, String> headers_0 = Map.ofEntries(
     Map.entry("Cache-Control", "max-age=0"),
     Map.entry("Sec-Fetch-Dest", "document"),
@@ -116,7 +121,8 @@ public class WebToursSimulation extends Simulation {
             )
         )
         .check(
-          status().is(200)
+          status().is(200),
+          substring("User password was correct")
         )
   );
 
@@ -157,6 +163,8 @@ public class WebToursSimulation extends Simulation {
         .formParam(".cgifields", "seatType")
         .formParam(".cgifields", "seatPref")
         .check(
+          status().is(200),
+          substring("Flight Selections"),
           css("[name=\"outboundFlight\"][checked=\"checked\"]", "value").exists().saveAs("outboundFlight"),
           css("[name=\"returnFlight\"][checked=\"checked\"]", "value")
             .withDefault("outboundFlight not found")
@@ -175,6 +183,10 @@ public class WebToursSimulation extends Simulation {
         .formParam("seatPref", "{seatPref}")
         .formParam("reserveFlights.x", "45")
         .formParam("reserveFlights.y", "11")
+        .check(
+          status().is(200),
+          substring("Flight Reservation")
+        )
     );
 
   private ChainBuilder reservation = exec(
@@ -199,6 +211,10 @@ public class WebToursSimulation extends Simulation {
         .formParam("buyFlights.x", "40")
         .formParam("buyFlights.y", "9")
         .formParam(".cgifields", "saveCC")
+        .check(
+          status().is(200),
+          substring("Reservation Made!")
+        )
     );
 
   private ChainBuilder homePage = exec(
@@ -212,6 +228,10 @@ public class WebToursSimulation extends Simulation {
           http("/cgi-bin/nav.pl?page=menu&in=home")
             .get("/cgi-bin/nav.pl?page=menu&in=home")
             .headers(headers_1)
+        )
+        .check(
+          status().is(200),
+          substring("User has returned to the home page")
         )
   );
 
@@ -230,6 +250,11 @@ public class WebToursSimulation extends Simulation {
             .get("/cgi-bin/nav.pl?page=menu&in=itinerary")
             .headers(headers_1)
         )
+        .check(
+          status().is(200),
+          substring("User wants the intineraries.  Since user has already logged on,\n" +
+                  " we can give them the menu in the navbar.")
+        )
   );
 
   private ChainBuilder cancelReservation = exec(
@@ -241,6 +266,10 @@ public class WebToursSimulation extends Simulation {
         .formParam("removeFlights.x", "62")
         .formParam("removeFlights.y", "9")
         .formParam(".cgifields", "1")
+        .check(
+          status().is(200),
+          substring("Flights List")
+        )
   );
 
   private ChainBuilder signOff = exec(
@@ -255,31 +284,43 @@ public class WebToursSimulation extends Simulation {
             .get("/cgi-bin/nav.pl?in=home")
             .headers(headers_1)
         )
+        .check(
+          status().is(200),
+          substring(" A Session ID has been created and loaded into a cookie called MSO.")
+        )
   );
   ScenarioBuilder userScn = scenario("WebToursSimulation")
           .feed(feeder)
           .exec(startPage)
-          .pause(0)
+          .pause(FORM_THINK_TIME)
           .exec(login)
-          .pause(0)
+          .pause(CLICK_THINK_TIME)
           .exec(flightsPage)
-          .pause(0)
+          .pause(FORM_THINK_TIME)
           .exec(findFlights)
-          .pause(0)
+          .pause(FORM_THINK_TIME)
           .exec(chooseFlights)
-          .pause(0)
+          .pause(FORM_THINK_TIME)
           .exec(reservation)
-          .pause(0)
+          .pause(FORM_THINK_TIME)
           .exec(homePage)
-          .pause(0)
+          .pause(CLICK_THINK_TIME)
           .exec(itinerary)
-          .pause(0)
+          .pause(FORM_THINK_TIME)
           .exec(cancelReservation)
-          .pause(0)
+          .pause(CLICK_THINK_TIME)
           .exec(signOff);
 
-
   {
-	  setUp(userScn.injectOpen(atOnceUsers(1))).protocols(httpProtocol);
+	  setUp(
+        userScn.injectClosed(
+                rampConcurrentUsers(0).to(5).during(RAMP_UP_TIME),
+                constantConcurrentUsers(5).during(HOLD_LOAD_TIME),
+                rampConcurrentUsers(5).to(10).during(RAMP_UP_TIME),
+                constantConcurrentUsers(10).during(HOLD_LOAD_TIME),
+                rampConcurrentUsers(10).to(15).during(RAMP_UP_TIME),
+                constantConcurrentUsers(15).during(HOLD_LOAD_TIME)
+        ).protocols(httpProtocol)
+      );
   }
 }
