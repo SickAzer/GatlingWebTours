@@ -15,7 +15,7 @@ public class WebToursSimulation extends Simulation {
   private static final int RAMP_UP_TIME = 10;
   private static final int HOLD_LOAD_TIME = 60;
   private static final int PACE = 15;
-  private static final int SCENARIO_LOOP_DURATION = 190
+  private static final int SCENARIO_LOOP_DURATION = 190;
 
   FeederBuilder<String> feeder = csv("users_input_data.csv").circular();
 
@@ -198,8 +198,8 @@ public class WebToursSimulation extends Simulation {
         .headers(headers_2)
         .formParam("firstName", "#{firstName}")
         .formParam("lastName", "#{lastName}")
-        .formParam("address1", "")
-        .formParam("address2", "")
+        .formParam("address1", "#{address1}")
+        .formParam("address2", "#{address2}")
         .formParam("pass1", "#{firstName} #{lastName}")
         .formParam("creditCard", "#{creditCard}")
         .formParam("expDate", "#{expDate}")
