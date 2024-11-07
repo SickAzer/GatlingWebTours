@@ -13,18 +13,21 @@ public class WebToursSimulation extends Simulation {
   private static final int CLICK_THINK_TIME = 3;
   private static final int FORM_THINK_TIME = 8;
   private static final int RAMP_UP_TIME = 10;
-  private static final int HOLD_LOAD_TIME = 10;
+  private static final int HOLD_LOAD_TIME = 60;
+  private static final int PACE = 15;
+  private static final int SCENARIO_LOOP_DURATION = 190
 
   FeederBuilder<String> feeder = csv("users_input_data.csv").circular();
 
-  private HttpProtocolBuilder httpProtocol = http
+   HttpProtocolBuilder httpProtocol = http
     .baseUrl("http://localhost:1080")
     .inferHtmlResources(AllowList(), DenyList(".*\\.js", ".*\\.css", ".*\\.gif", ".*\\.jpeg", ".*\\.jpg", ".*\\.ico", ".*\\.woff", ".*\\.woff2", ".*\\.(t|o)tf", ".*\\.png", ".*\\.svg", ".*detectportal\\.firefox\\.com.*"))
     .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7")
     .acceptEncodingHeader("gzip, deflate, br")
     .acceptLanguageHeader("en-US,en;q=0.9,ru;q=0.8,de-DE;q=0.7,de;q=0.6")
     .upgradeInsecureRequestsHeader("1")
-    .userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36");
+    .userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36")
+    .disableCaching();
 
 
   private Map<CharSequence, String> headers_0 = Map.ofEntries(
@@ -69,7 +72,7 @@ public class WebToursSimulation extends Simulation {
     Map.entry("sec-ch-ua-platform", "Windows")
   );
 
-  private ChainBuilder startPage = exec(
+   ChainBuilder startPage = exec(
       http("Start_Page")
         .get("/webtours/")
         .headers(headers_0)
@@ -98,7 +101,7 @@ public class WebToursSimulation extends Simulation {
         )
   );
 
-  private ChainBuilder login = exec(
+   ChainBuilder login = exec(
       http("Login")
         .post("/cgi-bin/login.pl")
         .headers(headers_2)
@@ -126,7 +129,7 @@ public class WebToursSimulation extends Simulation {
         )
   );
 
-  private ChainBuilder flightsPage = exec(
+   ChainBuilder flightsPage = exec(
       http("Flights_Page")
         .get("/cgi-bin/welcome.pl?page=search")
         .headers(headers_3)
@@ -144,7 +147,7 @@ public class WebToursSimulation extends Simulation {
         )
   );
 
-  private ChainBuilder findFlights = exec(
+   ChainBuilder findFlights = exec(
       http("Find_Flights")
         .post("/cgi-bin/reservations.pl")
         .headers(headers_2)
@@ -172,7 +175,7 @@ public class WebToursSimulation extends Simulation {
         )
     );
 
-  private ChainBuilder chooseFlights = exec(
+   ChainBuilder chooseFlights = exec(
       http("Choose_Flights")
         .post("/cgi-bin/reservations.pl")
         .headers(headers_2)
@@ -189,7 +192,7 @@ public class WebToursSimulation extends Simulation {
         )
     );
 
-  private ChainBuilder reservation = exec(
+   ChainBuilder reservation = exec(
       http("Reservation")
         .post("/cgi-bin/reservations.pl")
         .headers(headers_2)
@@ -217,7 +220,7 @@ public class WebToursSimulation extends Simulation {
         )
     );
 
-  private ChainBuilder homePage = exec(
+   ChainBuilder homePage = exec(
       http("Home_Page")
         .get("/cgi-bin/welcome.pl?page=menus")
         .headers(headers_3)
@@ -235,7 +238,7 @@ public class WebToursSimulation extends Simulation {
         )
   );
 
-  private ChainBuilder itinerary = exec(
+   ChainBuilder itinerary = exec(
       http("Itinerary")
         .get("/cgi-bin/welcome.pl?page=itinerary")
         .headers(headers_3)
@@ -257,7 +260,7 @@ public class WebToursSimulation extends Simulation {
         )
   );
 
-  private ChainBuilder cancelReservation = exec(
+   ChainBuilder cancelReservation = exec(
       http("Cancel_Reservation")
         .post("/cgi-bin/itinerary.pl")
         .headers(headers_2)
@@ -272,7 +275,7 @@ public class WebToursSimulation extends Simulation {
         )
   );
 
-  private ChainBuilder signOff = exec(
+   ChainBuilder signOff = exec(
       http("Sign_Off")
         .get("/cgi-bin/welcome.pl?signOff=1")
         .headers(headers_3)
@@ -289,28 +292,34 @@ public class WebToursSimulation extends Simulation {
           substring(" A Session ID has been created and loaded into a cookie called MSO.")
         )
   );
-  ScenarioBuilder userScn = scenario("WebToursSimulation")
-          .feed(feeder)
-          .exec(startPage)
-          .pause(FORM_THINK_TIME)
-          .exec(login)
-          .pause(CLICK_THINK_TIME)
-          .exec(flightsPage)
-          .pause(FORM_THINK_TIME)
-          .exec(findFlights)
-          .pause(FORM_THINK_TIME)
-          .exec(chooseFlights)
-          .pause(FORM_THINK_TIME)
-          .exec(reservation)
-          .pause(FORM_THINK_TIME)
-          .exec(homePage)
-          .pause(CLICK_THINK_TIME)
-          .exec(itinerary)
-          .pause(FORM_THINK_TIME)
-          .exec(cancelReservation)
-          .pause(CLICK_THINK_TIME)
-          .exec(signOff);
 
+  ScenarioBuilder userScn = scenario("WebToursSimulation").exec(
+          feed(feeder),
+          during(SCENARIO_LOOP_DURATION).on(
+            pace(PACE)
+              .exec(
+                startPage,
+                pause(FORM_THINK_TIME),
+                login,
+                pause(CLICK_THINK_TIME),
+                flightsPage,
+                pause(FORM_THINK_TIME),
+                findFlights,
+                pause(FORM_THINK_TIME),
+                chooseFlights,
+                pause(FORM_THINK_TIME),
+                reservation,
+                pause(FORM_THINK_TIME),
+                homePage,
+                pause(CLICK_THINK_TIME),
+                itinerary,
+                pause(FORM_THINK_TIME),
+                cancelReservation,
+                pause(CLICK_THINK_TIME),
+                signOff
+              )
+          )
+  );
   {
 	  setUp(
         userScn.injectClosed(
