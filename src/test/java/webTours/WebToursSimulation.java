@@ -17,7 +17,8 @@ public class WebToursSimulation extends Simulation {
   private static final int PACE = 160;
   private static final int SCENARIO_LOOP_DURATION = 700;
 
-  FeederBuilder<String> feeder = csv("users_input_data.csv").circular();
+  // Пользовательские данные содержатся в файле .csv
+   FeederBuilder<String> feeder = csv("users_input_data.csv").circular();
 
    HttpProtocolBuilder httpProtocol = http
     .baseUrl("http://localhost:1080")
@@ -71,6 +72,7 @@ public class WebToursSimulation extends Simulation {
     Map.entry("sec-ch-ua-platform", "Windows")
   );
 
+   // Стартовая страница
    ChainBuilder startPage = exec(
       http("Start_Page")
         .get("/webtours/")
@@ -100,6 +102,7 @@ public class WebToursSimulation extends Simulation {
         )
   );
 
+   // Вход в учетную запись
    ChainBuilder login = exec(
       pause(FORM_THINK_TIME),
       http("Login")
@@ -129,6 +132,7 @@ public class WebToursSimulation extends Simulation {
         )
   );
 
+   // Переход к поиску доступных рейсов
    ChainBuilder flightsPage = exec(
       pause(CLICK_THINK_TIME),
       http("Flights_Page")
@@ -148,6 +152,7 @@ public class WebToursSimulation extends Simulation {
         )
   );
 
+   // Поиск доступных рейсов
    ChainBuilder findFlights = exec(
       pause(FORM_THINK_TIME),
       http("Find_Flights")
@@ -177,6 +182,7 @@ public class WebToursSimulation extends Simulation {
         )
     );
 
+   // Выбор доступных рейсов
    ChainBuilder chooseFlights = exec(
       pause(FORM_THINK_TIME),
       http("Choose_Flights")
@@ -195,6 +201,7 @@ public class WebToursSimulation extends Simulation {
         )
     );
 
+   // Регистрация и оплата
    ChainBuilder reservation = exec(
       pause(FORM_THINK_TIME),
       http("Reservation")
@@ -224,6 +231,7 @@ public class WebToursSimulation extends Simulation {
         )
     );
 
+   // Выход на домашнюю страницу
    ChainBuilder homePage = exec(
       pause(CLICK_THINK_TIME),
       http("Home_Page")
@@ -243,6 +251,7 @@ public class WebToursSimulation extends Simulation {
         )
   );
 
+    // Запланированные рейсы
    ChainBuilder itinerary = exec(
       pause(CLICK_THINK_TIME),
       http("Itinerary")
@@ -266,6 +275,7 @@ public class WebToursSimulation extends Simulation {
         )
   );
 
+   // Отмена запланированного рейса
    ChainBuilder cancelReservation = exec(
       pause(FORM_THINK_TIME),
       http("Cancel_Reservation")
@@ -282,6 +292,7 @@ public class WebToursSimulation extends Simulation {
         )
   );
 
+   // Выход из учетной записи
    ChainBuilder signOff = exec(
       pause(CLICK_THINK_TIME),
       http("Sign_Off")
@@ -301,6 +312,7 @@ public class WebToursSimulation extends Simulation {
         )
   );
 
+  // Сборка сценария
   ScenarioBuilder userScn = scenario("WebToursSimulation").exec(
           feed(feeder),
           during(SCENARIO_LOOP_DURATION).on(
@@ -320,6 +332,7 @@ public class WebToursSimulation extends Simulation {
           )
   );
 
+  // Настройка порядка подключения пользователей
   {
 	  setUp(
         userScn.injectClosed(
