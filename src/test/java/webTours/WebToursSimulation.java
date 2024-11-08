@@ -12,10 +12,10 @@ public class WebToursSimulation extends Simulation {
 
   private static final int CLICK_THINK_TIME = 3;
   private static final int FORM_THINK_TIME = 8;
-  private static final int RAMP_UP_TIME = 10;
-  private static final int HOLD_LOAD_TIME = 60;
-  private static final int PACE = 15;
-  private static final int SCENARIO_LOOP_DURATION = 190;
+  private static final int RAMP_UP_TIME = 30;
+  private static final int HOLD_LOAD_TIME = 640;
+  private static final int PACE = 160;
+  private static final int SCENARIO_LOOP_DURATION = 700;
 
   FeederBuilder<String> feeder = csv("users_input_data.csv").circular();
 
@@ -28,7 +28,6 @@ public class WebToursSimulation extends Simulation {
     .upgradeInsecureRequestsHeader("1")
     .userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36")
     .disableCaching();
-
 
   private Map<CharSequence, String> headers_0 = Map.ofEntries(
     Map.entry("Cache-Control", "max-age=0"),
@@ -102,6 +101,7 @@ public class WebToursSimulation extends Simulation {
   );
 
    ChainBuilder login = exec(
+      pause(FORM_THINK_TIME),
       http("Login")
         .post("/cgi-bin/login.pl")
         .headers(headers_2)
@@ -130,6 +130,7 @@ public class WebToursSimulation extends Simulation {
   );
 
    ChainBuilder flightsPage = exec(
+      pause(CLICK_THINK_TIME),
       http("Flights_Page")
         .get("/cgi-bin/welcome.pl?page=search")
         .headers(headers_3)
@@ -148,6 +149,7 @@ public class WebToursSimulation extends Simulation {
   );
 
    ChainBuilder findFlights = exec(
+      pause(FORM_THINK_TIME),
       http("Find_Flights")
         .post("/cgi-bin/reservations.pl")
         .headers(headers_2)
@@ -176,6 +178,7 @@ public class WebToursSimulation extends Simulation {
     );
 
    ChainBuilder chooseFlights = exec(
+      pause(FORM_THINK_TIME),
       http("Choose_Flights")
         .post("/cgi-bin/reservations.pl")
         .headers(headers_2)
@@ -193,6 +196,7 @@ public class WebToursSimulation extends Simulation {
     );
 
    ChainBuilder reservation = exec(
+      pause(FORM_THINK_TIME),
       http("Reservation")
         .post("/cgi-bin/reservations.pl")
         .headers(headers_2)
@@ -221,6 +225,7 @@ public class WebToursSimulation extends Simulation {
     );
 
    ChainBuilder homePage = exec(
+      pause(CLICK_THINK_TIME),
       http("Home_Page")
         .get("/cgi-bin/welcome.pl?page=menus")
         .headers(headers_3)
@@ -239,6 +244,7 @@ public class WebToursSimulation extends Simulation {
   );
 
    ChainBuilder itinerary = exec(
+      pause(CLICK_THINK_TIME),
       http("Itinerary")
         .get("/cgi-bin/welcome.pl?page=itinerary")
         .headers(headers_3)
@@ -261,6 +267,7 @@ public class WebToursSimulation extends Simulation {
   );
 
    ChainBuilder cancelReservation = exec(
+      pause(FORM_THINK_TIME),
       http("Cancel_Reservation")
         .post("/cgi-bin/itinerary.pl")
         .headers(headers_2)
@@ -276,6 +283,7 @@ public class WebToursSimulation extends Simulation {
   );
 
    ChainBuilder signOff = exec(
+      pause(CLICK_THINK_TIME),
       http("Sign_Off")
         .get("/cgi-bin/welcome.pl?signOff=1")
         .headers(headers_3)
@@ -299,36 +307,28 @@ public class WebToursSimulation extends Simulation {
             pace(PACE)
               .exec(
                 startPage,
-                pause(FORM_THINK_TIME),
                 login,
-                pause(CLICK_THINK_TIME),
                 flightsPage,
-                pause(FORM_THINK_TIME),
                 findFlights,
-                pause(FORM_THINK_TIME),
                 chooseFlights,
-                pause(FORM_THINK_TIME),
                 reservation,
-                pause(FORM_THINK_TIME),
                 homePage,
-                pause(CLICK_THINK_TIME),
                 itinerary,
-                pause(FORM_THINK_TIME),
                 cancelReservation,
-                pause(CLICK_THINK_TIME),
                 signOff
               )
           )
   );
+
   {
 	  setUp(
         userScn.injectClosed(
-                rampConcurrentUsers(0).to(5).during(RAMP_UP_TIME),
-                constantConcurrentUsers(5).during(HOLD_LOAD_TIME),
-                rampConcurrentUsers(5).to(10).during(RAMP_UP_TIME),
+                rampConcurrentUsers(0).to(10).during(RAMP_UP_TIME),
                 constantConcurrentUsers(10).during(HOLD_LOAD_TIME),
-                rampConcurrentUsers(10).to(15).during(RAMP_UP_TIME),
-                constantConcurrentUsers(15).during(HOLD_LOAD_TIME)
+                rampConcurrentUsers(10).to(20).during(RAMP_UP_TIME),
+                constantConcurrentUsers(20).during(HOLD_LOAD_TIME),
+                rampConcurrentUsers(20).to(30).during(RAMP_UP_TIME),
+                constantConcurrentUsers(30).during(HOLD_LOAD_TIME)
         ).protocols(httpProtocol)
       );
   }
