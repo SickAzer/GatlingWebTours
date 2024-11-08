@@ -39,70 +39,24 @@ public class WebToursSimulation extends Simulation {
                     " (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36")
             .disableCaching();
 
-    private Map<CharSequence, String> headers_0 = Map.ofEntries(
-            Map.entry("Cache-Control", "max-age=0"),
-            Map.entry("Sec-Fetch-Dest", "document"),
-            Map.entry("Sec-Fetch-Mode", "navigate"),
-            Map.entry("Sec-Fetch-Site", "none"),
-            Map.entry("Sec-Fetch-User", "?1"),
-            Map.entry("sec-ch-ua", "Chromium\";v=\"130\", \"Google Chrome\";v=\"130\", \"Not?A_Brand\";v=\"99"),
-            Map.entry("sec-ch-ua-mobile", "?0"),
-            Map.entry("sec-ch-ua-platform", "Windows")
-    );
-
-    private Map<CharSequence, String> headers_1 = Map.ofEntries(
-            Map.entry("Sec-Fetch-Dest", "frame"),
-            Map.entry("Sec-Fetch-Mode", "navigate"),
-            Map.entry("Sec-Fetch-Site", "same-origin"),
-            Map.entry("sec-ch-ua", "Chromium\";v=\"130\", \"Google Chrome\";v=\"130\", \"Not?A_Brand\";v=\"99"),
-            Map.entry("sec-ch-ua-mobile", "?0"),
-            Map.entry("sec-ch-ua-platform", "Windows")
-    );
-
-    private Map<CharSequence, String> headers_2 = Map.ofEntries(
-            Map.entry("Cache-Control", "max-age=0"),
-            Map.entry("Origin", "http://localhost:1080"),
-            Map.entry("Sec-Fetch-Dest", "frame"),
-            Map.entry("Sec-Fetch-Mode", "navigate"),
-            Map.entry("Sec-Fetch-Site", "same-origin"),
-            Map.entry("Sec-Fetch-User", "?1"),
-            Map.entry("sec-ch-ua", "Chromium\";v=\"130\", \"Google Chrome\";v=\"130\", \"Not?A_Brand\";v=\"99"),
-            Map.entry("sec-ch-ua-mobile", "?0"),
-            Map.entry("sec-ch-ua-platform", "Windows")
-    );
-
-    private Map<CharSequence, String> headers_3 = Map.ofEntries(
-            Map.entry("Sec-Fetch-Dest", "frame"),
-            Map.entry("Sec-Fetch-Mode", "navigate"),
-            Map.entry("Sec-Fetch-Site", "same-origin"),
-            Map.entry("Sec-Fetch-User", "?1"),
-            Map.entry("sec-ch-ua", "Chromium\";v=\"130\", \"Google Chrome\";v=\"130\", \"Not?A_Brand\";v=\"99"),
-            Map.entry("sec-ch-ua-mobile", "?0"),
-            Map.entry("sec-ch-ua-platform", "Windows")
-    );
-
     // Стартовая страница
     ChainBuilder startPage = exec(
             http("Start_Page")
                     .get("/webtours/")
-                    .headers(headers_0)
                     .resources(
                             http("/webtours/header.html")
-                                    .get("/webtours/header.html")
-                                    .headers(headers_1),
+                                    .get("/webtours/header.html"),
                             http("/cgi-bin/welcome.pl?signOff=true")
                                     .get("/cgi-bin/welcome.pl?signOff=true")
-                                    .headers(headers_1)
                                     .check(
                                             substring("A Session ID has been created and" +
                                                     " loaded into a cookie called MSO")
                                     ),
                             http("/WebTours/home.html")
-                                    .get("/WebTours/home.html")
-                                    .headers(headers_1),
+                                    .get("/WebTours/home.html"),
+
                             http("/cgi-bin/nav.pl?in=home")
                                     .get("/cgi-bin/nav.pl?in=home")
-                                    .headers(headers_1)
                                     .check(
                                             css("[name=\"userSession\"]", "value")
                                                     .exists().saveAs("userSession")
@@ -118,7 +72,6 @@ public class WebToursSimulation extends Simulation {
             pause(FORM_THINK_TIME),
             http("Login")
                     .post("/cgi-bin/login.pl")
-                    .headers(headers_2)
                     .formParam("userSession", "#{userSession}")
                     .formParam("username", "#{userName}")
                     .formParam("password", "#{password}")
@@ -127,11 +80,9 @@ public class WebToursSimulation extends Simulation {
                     .formParam("JSFormSubmit", "off")
                     .resources(
                             http("/cgi-bin/nav.pl?page=menu&in=home")
-                                    .get("/cgi-bin/nav.pl?page=menu&in=home")
-                                    .headers(headers_1),
+                                    .get("/cgi-bin/nav.pl?page=menu&in=home"),
                             http("/cgi-bin/login.pl?intro=true")
                                     .get("/cgi-bin/login.pl?intro=true")
-                                    .headers(headers_1)
                                     .check(
                                             substring("Don't forget to sign off when\n" +
                                                     "you're done!")
@@ -148,14 +99,11 @@ public class WebToursSimulation extends Simulation {
             pause(CLICK_THINK_TIME),
             http("Flights_Page")
                     .get("/cgi-bin/welcome.pl?page=search")
-                    .headers(headers_3)
                     .resources(
                             http("/cgi-bin/reservations.pl?page=welcome")
-                                    .get("/cgi-bin/reservations.pl?page=welcome")
-                                    .headers(headers_1),
+                                    .get("/cgi-bin/reservations.pl?page=welcome"),
                             http("/cgi-bin/nav.pl?page=menu&in=flights")
                                     .get("/cgi-bin/nav.pl?page=menu&in=flights")
-                                    .headers(headers_1)
                     )
                     .check(
                             status().is(200),
@@ -168,7 +116,6 @@ public class WebToursSimulation extends Simulation {
             pause(FORM_THINK_TIME),
             http("Find_Flights")
                     .post("/cgi-bin/reservations.pl")
-                    .headers(headers_2)
                     .formParam("advanceDiscount", "0")
                     .formParam("depart", "Denver")
                     .formParam("departDate", "#{departDate}")
@@ -200,7 +147,6 @@ public class WebToursSimulation extends Simulation {
             pause(FORM_THINK_TIME),
             http("Choose_Flights")
                     .post("/cgi-bin/reservations.pl")
-                    .headers(headers_2)
                     .formParam("outboundFlight", "011;343;11/07/2024")
                     .formParam("numPassengers", "#{numPassengers}")
                     .formParam("advanceDiscount", "0")
@@ -219,7 +165,6 @@ public class WebToursSimulation extends Simulation {
             pause(FORM_THINK_TIME),
             http("Reservation")
                     .post("/cgi-bin/reservations.pl")
-                    .headers(headers_2)
                     .formParam("firstName", "#{firstName}")
                     .formParam("lastName", "#{lastName}")
                     .formParam("address1", "#{address1}")
@@ -249,14 +194,11 @@ public class WebToursSimulation extends Simulation {
             pause(CLICK_THINK_TIME),
             http("Home_Page")
                     .get("/cgi-bin/welcome.pl?page=menus")
-                    .headers(headers_3)
                     .resources(
                             http("/cgi-bin/login.pl?intro=true")
-                                    .get("/cgi-bin/login.pl?intro=true")
-                                    .headers(headers_1),
+                                    .get("/cgi-bin/login.pl?intro=true"),
                             http("/cgi-bin/nav.pl?page=menu&in=home")
                                     .get("/cgi-bin/nav.pl?page=menu&in=home")
-                                    .headers(headers_1)
                     )
                     .check(
                             status().is(200),
@@ -269,17 +211,14 @@ public class WebToursSimulation extends Simulation {
             pause(CLICK_THINK_TIME),
             http("Itinerary")
                     .get("/cgi-bin/welcome.pl?page=itinerary")
-                    .headers(headers_3)
                     .resources(
                             http("/cgi-bin/itinerary.pl")
                                     .get("/cgi-bin/itinerary.pl")
-                                    .headers(headers_1)
                                     .check(
                                             css("[name=\"flightID\"]", "value").exists().saveAs("flightID")
                                     ),
                             http("/cgi-bin/nav.pl?page=menu&in=itinerary")
                                     .get("/cgi-bin/nav.pl?page=menu&in=itinerary")
-                                    .headers(headers_1)
                     )
                     .check(
                             status().is(200),
@@ -293,7 +232,6 @@ public class WebToursSimulation extends Simulation {
             pause(FORM_THINK_TIME),
             http("Cancel_Reservation")
                     .post("/cgi-bin/itinerary.pl")
-                    .headers(headers_2)
                     .formParam("1", "on")
                     .formParam("flightID", "#{flightID}")
                     .formParam("removeFlights.x", "62")
@@ -310,14 +248,11 @@ public class WebToursSimulation extends Simulation {
             pause(CLICK_THINK_TIME),
             http("Sign_Off")
                     .get("/cgi-bin/welcome.pl?signOff=1")
-                    .headers(headers_3)
                     .resources(
                             http("/WebTours/home.html")
-                                    .get("/WebTours/home.html")
-                                    .headers(headers_1),
+                                    .get("/WebTours/home.html"),
                             http("/cgi-bin/nav.pl?in=home")
                                     .get("/cgi-bin/nav.pl?in=home")
-                                    .headers(headers_1)
                     )
                     .check(
                             status().is(200),
