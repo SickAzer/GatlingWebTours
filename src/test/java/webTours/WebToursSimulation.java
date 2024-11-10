@@ -6,11 +6,8 @@ import io.gatling.javaapi.core.ScenarioBuilder;
 import io.gatling.javaapi.core.Simulation;
 import io.gatling.javaapi.http.HttpProtocolBuilder;
 
-import java.util.Map;
-
 import static io.gatling.javaapi.core.CoreDsl.*;
-import static io.gatling.javaapi.http.HttpDsl.http;
-import static io.gatling.javaapi.http.HttpDsl.status;
+import static io.gatling.javaapi.http.HttpDsl.*;
 
 public class WebToursSimulation extends Simulation {
 
@@ -40,32 +37,33 @@ public class WebToursSimulation extends Simulation {
             .disableCaching();
 
     // Стартовая страница
-    ChainBuilder startPage = exec(
+    ChainBuilder startPage =
+            exec(
             http("Start_Page")
                     .get("/webtours/")
-                    .resources(
-                            http("/webtours/header.html")
-                                    .get("/webtours/header.html"),
-                            http("/cgi-bin/welcome.pl?signOff=true")
-                                    .get("/cgi-bin/welcome.pl?signOff=true")
-                                    .check(
-                                            substring("A Session ID has been created and" +
-                                                    " loaded into a cookie called MSO")
-                                    ),
-                            http("/WebTours/home.html")
-                                    .get("/WebTours/home.html"),
-
-                            http("/cgi-bin/nav.pl?in=home")
-                                    .get("/cgi-bin/nav.pl?in=home")
-                                    .check(
-                                            css("[name=\"userSession\"]", "value")
-                                                    .exists().saveAs("userSession")
-                                    )
-                    )
                     .check(
                             status().is(200)
                     )
-    );
+            )
+            .exec(
+                    http("/webtours/header.html")
+                            .get("/webtours/header.html"),
+                    http("/cgi-bin/welcome.pl?signOff=true")
+                            .get("/cgi-bin/welcome.pl?signOff=true")
+                            .check(
+                                    substring("A Session ID has been created and" +
+                                            " loaded into a cookie called MSO")
+                            ),
+                    http("/WebTours/home.html")
+                            .get("/WebTours/home.html"),
+
+                    http("/cgi-bin/nav.pl?in=home")
+                            .get("/cgi-bin/nav.pl?in=home")
+                            .check(
+                                    css("[name=\"userSession\"]", "value")
+                                            .exists().saveAs("userSession")
+                            )
+            );
 
     // Вход в учетную запись
     ChainBuilder login = exec(
@@ -134,10 +132,11 @@ public class WebToursSimulation extends Simulation {
                             status().is(200),
                             substring("Flight Selections"),
                             css("[name=\"outboundFlight\"][checked=\"checked\"]", "value")
+                                    .withDefault("outboundFlight not found")
                                     .exists()
                                     .saveAs("outboundFlight"),
                             css("[name=\"returnFlight\"][checked=\"checked\"]", "value")
-                                    .withDefault("outboundFlight not found")
+                                    .withDefault("returnFlight not found")
                                     .saveAs("returnFlight")
                     )
     );
@@ -215,7 +214,10 @@ public class WebToursSimulation extends Simulation {
                             http("/cgi-bin/itinerary.pl")
                                     .get("/cgi-bin/itinerary.pl")
                                     .check(
-                                            css("[name=\"flightID\"]", "value").exists().saveAs("flightID")
+                                            css("[name=\"flightID\"]", "value")
+                                                    .withDefault("flightID not found")
+                                                    .exists()
+                                                    .saveAs("flightID")
                                     ),
                             http("/cgi-bin/nav.pl?page=menu&in=itinerary")
                                     .get("/cgi-bin/nav.pl?page=menu&in=itinerary")
