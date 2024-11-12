@@ -6,20 +6,19 @@ import io.gatling.javaapi.core.ScenarioBuilder;
 import io.gatling.javaapi.core.Simulation;
 import io.gatling.javaapi.http.HttpProtocolBuilder;
 
+import java.time.Duration;
+
 import static io.gatling.javaapi.core.CoreDsl.*;
 import static io.gatling.javaapi.http.HttpDsl.*;
 
 public class WebToursSimulation extends Simulation {
 
-    private static final int CLICK_THINK_TIME = 3;
-    private static final int FORM_THINK_TIME = 8;
-    private static final int RAMP_UP_TIME = 30;
-    private static final int HOLD_LOAD_TIME = 640;
-    private static final int PACE = 160;
-    private static final int SCENARIO_LOOP_DURATION = 70;
-
-    // Пользовательские данные содержатся в файле .csv
-    FeederBuilder<String> feeder = csv("users_input_data.csv").circular();
+    private static final Duration CLICK_THINK_TIME = Duration.ofSeconds(3);
+    private static final Duration FORM_THINK_TIME = Duration.ofSeconds(8);;
+    private static final Duration RAMP_UP_TIME = Duration.ofSeconds(30);;
+    private static final Duration HOLD_LOAD_TIME = Duration.ofSeconds(640);;
+    private static final Duration PACE = Duration.ofSeconds(160);;
+    private static final Duration SCENARIO_LOOP_DURATION = Duration.ofSeconds(2010);;
 
     // Протокол
     HttpProtocolBuilder httpProtocol = http
@@ -44,8 +43,7 @@ public class WebToursSimulation extends Simulation {
                     .check(
                             status().is(200)
                     )
-            )
-            .exec(
+            ).exec(
                     http("/webtours/header.html")
                             .get("/webtours/header.html"),
                     http("/cgi-bin/welcome.pl?signOff=true")
@@ -115,7 +113,7 @@ public class WebToursSimulation extends Simulation {
             http("Find_Flights")
                     .post("/cgi-bin/reservations.pl")
                     .formParam("advanceDiscount", "0")
-                    .formParam("depart", "Denver")
+                    .formParam("depart", "#{depart}")
                     .formParam("departDate", "#{departDate}")
                     .formParam("arrive", "#{arrive}")
                     .formParam("returnDate", "#{returnDate}")
@@ -150,7 +148,7 @@ public class WebToursSimulation extends Simulation {
                     .formParam("numPassengers", "#{numPassengers}")
                     .formParam("advanceDiscount", "0")
                     .formParam("seatType", "#{seatType}")
-                    .formParam("seatPref", "{seatPref}")
+                    .formParam("seatPref", "#{seatPref}")
                     .formParam("reserveFlights.x", "45")
                     .formParam("reserveFlights.y", "11")
                     .check(
@@ -241,7 +239,7 @@ public class WebToursSimulation extends Simulation {
                     .formParam(".cgifields", "1")
                     .check(
                             status().is(200),
-                            substring("Flights List")
+                            substring("No flights have been reserved.")
                     )
     );
 
@@ -262,10 +260,13 @@ public class WebToursSimulation extends Simulation {
                     )
     );
 
-    // Сборка сценария
+    // Пользовательские данные содержатся в файле .csv
+    FeederBuilder<String> feeder = csv("users_input_data.csv").circular();
+
+    // Сборка сценария покупки билета
     ScenarioBuilder userScn = scenario("WebToursSimulation").exec(
-            feed(feeder),
             during(SCENARIO_LOOP_DURATION).on(
+                    feed(feeder),
                     pace(PACE)
                             .exec(
                                     startPage,
@@ -286,12 +287,12 @@ public class WebToursSimulation extends Simulation {
     {
         setUp(
                 userScn.injectClosed(
-                        rampConcurrentUsers(0).to(10).during(RAMP_UP_TIME),
-                        constantConcurrentUsers(10).during(HOLD_LOAD_TIME),
-                        rampConcurrentUsers(10).to(20).during(RAMP_UP_TIME),
-                        constantConcurrentUsers(20).during(HOLD_LOAD_TIME),
-                        rampConcurrentUsers(20).to(30).during(RAMP_UP_TIME),
-                        constantConcurrentUsers(30).during(HOLD_LOAD_TIME)
+                        rampConcurrentUsers(0).to(44).during(RAMP_UP_TIME),
+                        constantConcurrentUsers(44).during(HOLD_LOAD_TIME),
+                        rampConcurrentUsers(44).to(88).during(RAMP_UP_TIME),
+                        constantConcurrentUsers(88).during(HOLD_LOAD_TIME),
+                        rampConcurrentUsers(88).to(132).during(RAMP_UP_TIME),
+                        constantConcurrentUsers(132).during(HOLD_LOAD_TIME)
                 ).protocols(httpProtocol)
         );
     }

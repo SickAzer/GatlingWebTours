@@ -1,101 +1,501 @@
 userName,password,firstName,lastName,address1,address2,depart,arrive,departDate,returnDate,numPassengers,roundTrip,seatPref,seatType,creditCard,expDate
-Host1,Host1_pass,First_name_1,Last_name_1,Street_1,City_1,San Francisco,London,11/26/2024,12/29/2024,2,,Window,First,4002513226387131,8/12
-Host2,Host2_pass,First_name_2,Last_name_2,Street_2,City_2,Portland,San Francisco,11/29/2024,12/08/2024,1,on,None,Coach,2478843597774269,9/9
-Host3,Host3_pass,First_name_3,Last_name_3,Street_3,City_3,Sydney,Zurich,11/17/2024,12/18/2024,3,,Window,Business,2249485869491314,11/13
-Host4,Host4_pass,First_name_4,Last_name_4,Street_4,City_4,Frankfurt,Paris,11/16/2024,01/03/2025,1,,None,First,8104580773700261,2/6
-Host5,Host5_pass,First_name_5,Last_name_5,Street_5,City_5,Portland,Denver,11/30/2024,12/31/2024,3,on,Window,First,8887795049579975,10/3
-Host6,Host6_pass,First_name_6,Last_name_6,Street_6,City_6,Paris,Seattle,12/07/2024,01/06/2025,2,on,Window,Coach,7411278976805237,11/20
-Host7,Host7_pass,First_name_7,Last_name_7,Street_7,City_7,Frankfurt,Portland,11/28/2024,01/04/2025,3,,Window,Business,2091500918400073,6/30
-Host8,Host8_pass,First_name_8,Last_name_8,Street_8,City_8,San Francisco,Los Angeles,11/27/2024,12/15/2024,2,on,None,Coach,2021124196785127,5/28
-Host9,Host9_pass,First_name_9,Last_name_9,Street_9,City_9,Seattle,London,12/01/2024,12/28/2024,2,on,None,Coach,6355140349485683,5/8
-Host10,Host10_pass,First_name_10,Last_name_10,Street_10,City_10,London,Los Angeles,12/07/2024,12/23/2024,1,on,Window,Coach,3453591837911705,12/12
-Host11,Host11_pass,First_name_11,Last_name_11,Street_11,City_11,Denver,Frankfurt,11/11/2024,12/16/2024,3,on,Window,First,8389200654144764,4/3
-Host12,Host12_pass,First_name_12,Last_name_12,Street_12,City_12,Zurich,Denver,11/13/2024,12/09/2024,2,,Aisle,Coach,6567803884727753,6/5
-Host13,Host13_pass,First_name_13,Last_name_13,Street_13,City_13,Seattle,Portland,11/19/2024,12/30/2024,3,,Aisle,First,5446000094738467,11/10
-Host14,Host14_pass,First_name_14,Last_name_14,Street_14,City_14,Denver,San Francisco,11/27/2024,12/30/2024,2,,Window,Business,0426928433073280,2/26
-Host15,Host15_pass,First_name_15,Last_name_15,Street_15,City_15,London,Portland,11/20/2024,12/15/2024,2,,Window,First,0686246318217072,2/6
-Host16,Host16_pass,First_name_16,Last_name_16,Street_16,City_16,San Francisco,Seattle,12/03/2024,12/09/2024,2,,Aisle,First,9914065873682914,10/3
-Host17,Host17_pass,First_name_17,Last_name_17,Street_17,City_17,Sydney,Zurich,11/25/2024,12/08/2024,2,on,None,Business,6228603601400487,3/25
-Host18,Host18_pass,First_name_18,Last_name_18,Street_18,City_18,Denver,Zurich,11/20/2024,12/13/2024,3,,None,Coach,4772013213362656,8/29
-Host19,Host19_pass,First_name_19,Last_name_19,Street_19,City_19,Frankfurt,San Francisco,11/18/2024,01/01/2025,2,,Aisle,First,6805182326216892,7/14
-Host20,Host20_pass,First_name_20,Last_name_20,Street_20,City_20,Frankfurt,San Francisco,12/01/2024,12/23/2024,3,on,Window,Business,2438011725811145,7/2
-Host21,Host21_pass,First_name_21,Last_name_21,Street_21,City_21,Frankfurt,Portland,11/14/2024,12/10/2024,2,on,Window,Coach,4775667835765249,5/25
-Host22,Host22_pass,First_name_22,Last_name_22,Street_22,City_22,Portland,Frankfurt,11/30/2024,01/02/2025,2,on,None,Coach,8251235361203056,12/8
-Host23,Host23_pass,First_name_23,Last_name_23,Street_23,City_23,Portland,Frankfurt,11/10/2024,12/21/2024,3,on,Aisle,First,2253722676575086,12/27
-Host24,Host24_pass,First_name_24,Last_name_24,Street_24,City_24,Sydney,Portland,11/11/2024,12/21/2024,2,,Aisle,First,9941947448555275,10/19
-Host25,Host25_pass,First_name_25,Last_name_25,Street_25,City_25,Portland,Sydney,12/02/2024,12/21/2024,1,,Aisle,First,6059651448392842,7/11
-Host26,Host26_pass,First_name_26,Last_name_26,Street_26,City_26,Seattle,Zurich,11/28/2024,12/13/2024,3,on,Window,First,0173895616379063,8/30
-Host27,Host27_pass,First_name_27,Last_name_27,Street_27,City_27,Los Angeles,London,11/23/2024,12/19/2024,2,on,Aisle,Business,1201553240524674,5/9
-Host28,Host28_pass,First_name_28,Last_name_28,Street_28,City_28,Zurich,Los Angeles,11/29/2024,12/08/2024,2,on,None,Coach,4209653463404799,5/1
-Host29,Host29_pass,First_name_29,Last_name_29,Street_29,City_29,Denver,Frankfurt,11/14/2024,12/26/2024,2,,Window,Coach,0916936159951618,8/13
-Host30,Host30_pass,First_name_30,Last_name_30,Street_30,City_30,Portland,London,11/30/2024,12/17/2024,2,on,None,Coach,3006442619816635,11/12
-Host31,Host31_pass,First_name_31,Last_name_31,Street_31,City_31,London,Seattle,11/30/2024,01/01/2025,1,,Window,Business,5118354997852217,11/1
-Host32,Host32_pass,First_name_32,Last_name_32,Street_32,City_32,Zurich,Denver,11/22/2024,12/17/2024,3,on,Aisle,Coach,3859564397607673,6/21
-Host33,Host33_pass,First_name_33,Last_name_33,Street_33,City_33,Frankfurt,Portland,11/12/2024,12/22/2024,3,,Window,First,1862118649966394,7/26
-Host34,Host34_pass,First_name_34,Last_name_34,Street_34,City_34,Seattle,San Francisco,11/27/2024,12/14/2024,2,on,Window,Business,6768634658248008,8/13
-Host35,Host35_pass,First_name_35,Last_name_35,Street_35,City_35,Zurich,Sydney,11/21/2024,12/19/2024,2,on,Aisle,Coach,8516422852789113,11/29
-Host36,Host36_pass,First_name_36,Last_name_36,Street_36,City_36,Paris,Frankfurt,12/07/2024,12/25/2024,2,on,Window,Coach,0150934707222561,8/14
-Host37,Host37_pass,First_name_37,Last_name_37,Street_37,City_37,London,Portland,11/12/2024,12/29/2024,1,,Window,Business,9077651728940178,4/15
-Host38,Host38_pass,First_name_38,Last_name_38,Street_38,City_38,London,Portland,11/14/2024,12/19/2024,2,on,Aisle,Business,2017341799834263,12/2
-Host39,Host39_pass,First_name_39,Last_name_39,Street_39,City_39,Seattle,San Francisco,11/21/2024,01/04/2025,2,,Window,First,2938175634395472,2/11
-Host40,Host40_pass,First_name_40,Last_name_40,Street_40,City_40,Denver,San Francisco,11/20/2024,12/17/2024,3,,Window,Coach,7345398313482255,10/19
-Host41,Host41_pass,First_name_41,Last_name_41,Street_41,City_41,Portland,Sydney,11/15/2024,01/05/2025,2,on,Aisle,First,8957643623229800,8/2
-Host42,Host42_pass,First_name_42,Last_name_42,Street_42,City_42,Zurich,Seattle,12/01/2024,12/14/2024,3,on,Aisle,Business,3963347236098054,8/5
-Host43,Host43_pass,First_name_43,Last_name_43,Street_43,City_43,Paris,Portland,11/21/2024,12/17/2024,1,,Aisle,Business,0438636368704957,7/10
-Host44,Host44_pass,First_name_44,Last_name_44,Street_44,City_44,Seattle,Paris,11/20/2024,12/14/2024,1,,None,Coach,4595242777494758,7/29
-Host45,Host45_pass,First_name_45,Last_name_45,Street_45,City_45,London,San Francisco,12/05/2024,01/02/2025,2,on,Aisle,Business,7557730484875096,12/20
-Host46,Host46_pass,First_name_46,Last_name_46,Street_46,City_46,Los Angeles,Denver,11/24/2024,12/29/2024,2,on,None,Business,6076152851351502,12/19
-Host47,Host47_pass,First_name_47,Last_name_47,Street_47,City_47,Seattle,Denver,11/12/2024,12/16/2024,1,on,Window,Business,0860854407516919,5/12
-Host48,Host48_pass,First_name_48,Last_name_48,Street_48,City_48,Frankfurt,Los Angeles,11/15/2024,01/04/2025,2,on,Window,Coach,9180197516681982,3/27
-Host49,Host49_pass,First_name_49,Last_name_49,Street_49,City_49,San Francisco,Zurich,12/03/2024,12/20/2024,2,on,None,Business,4994684811633785,3/12
-Host50,Host50_pass,First_name_50,Last_name_50,Street_50,City_50,Paris,Denver,12/05/2024,12/30/2024,1,on,Window,First,3051179081682826,2/5
-Host51,Host51_pass,First_name_51,Last_name_51,Street_51,City_51,Los Angeles,Denver,11/11/2024,12/24/2024,2,on,None,First,7438497230226733,5/10
-Host52,Host52_pass,First_name_52,Last_name_52,Street_52,City_52,Los Angeles,London,11/30/2024,12/27/2024,2,,Aisle,First,3633613571047554,11/25
-Host53,Host53_pass,First_name_53,Last_name_53,Street_53,City_53,London,Paris,12/01/2024,12/29/2024,2,,None,Coach,8256528684058046,4/2
-Host54,Host54_pass,First_name_54,Last_name_54,Street_54,City_54,Portland,Los Angeles,11/19/2024,12/28/2024,1,on,Aisle,Business,1960756161524929,12/12
-Host55,Host55_pass,First_name_55,Last_name_55,Street_55,City_55,Denver,San Francisco,12/05/2024,12/13/2024,1,,Window,Business,5319228747597646,9/22
-Host56,Host56_pass,First_name_56,Last_name_56,Street_56,City_56,Denver,Sydney,12/04/2024,12/11/2024,2,on,Aisle,First,8185668331825854,8/27
-Host57,Host57_pass,First_name_57,Last_name_57,Street_57,City_57,San Francisco,Paris,11/29/2024,12/24/2024,1,on,Window,Coach,8255263888175270,4/15
-Host58,Host58_pass,First_name_58,Last_name_58,Street_58,City_58,San Francisco,Seattle,11/14/2024,12/17/2024,2,on,Window,Business,9721172061515203,10/20
-Host59,Host59_pass,First_name_59,Last_name_59,Street_59,City_59,Denver,San Francisco,11/21/2024,12/14/2024,3,on,None,Business,7891607391501253,5/11
-Host60,Host60_pass,First_name_60,Last_name_60,Street_60,City_60,Zurich,Portland,11/11/2024,01/05/2025,2,on,Window,Business,0054501219129102,2/6
-Host61,Host61_pass,First_name_61,Last_name_61,Street_61,City_61,Paris,London,11/15/2024,12/18/2024,3,,Aisle,First,0697969897183661,1/28
-Host62,Host62_pass,First_name_62,Last_name_62,Street_62,City_62,Paris,Zurich,12/07/2024,12/23/2024,3,,Window,Business,2048122570678003,10/20
-Host63,Host63_pass,First_name_63,Last_name_63,Street_63,City_63,San Francisco,Portland,11/23/2024,12/21/2024,1,,Aisle,Coach,1076547948429794,2/18
-Host64,Host64_pass,First_name_64,Last_name_64,Street_64,City_64,Sydney,Portland,11/27/2024,12/20/2024,3,,Window,Coach,1697873376216715,2/7
-Host65,Host65_pass,First_name_65,Last_name_65,Street_65,City_65,Seattle,San Francisco,12/06/2024,12/11/2024,1,on,None,Coach,2658572511868172,10/11
-Host66,Host66_pass,First_name_66,Last_name_66,Street_66,City_66,Sydney,Los Angeles,11/23/2024,01/03/2025,2,on,None,Business,1449366131217098,1/20
-Host67,Host67_pass,First_name_67,Last_name_67,Street_67,City_67,London,Frankfurt,12/03/2024,12/15/2024,3,,Aisle,Business,2548987128571526,1/8
-Host68,Host68_pass,First_name_68,Last_name_68,Street_68,City_68,London,Paris,12/02/2024,12/18/2024,2,,Window,Business,6073007016405837,1/12
-Host69,Host69_pass,First_name_69,Last_name_69,Street_69,City_69,Paris,Denver,12/01/2024,12/28/2024,2,on,None,Business,4725677126625576,6/11
-Host70,Host70_pass,First_name_70,Last_name_70,Street_70,City_70,San Francisco,Sydney,11/20/2024,12/21/2024,3,on,Window,Business,5513773025293410,2/21
-Host71,Host71_pass,First_name_71,Last_name_71,Street_71,City_71,Portland,Los Angeles,12/02/2024,12/29/2024,3,,None,Coach,7634865263445028,10/28
-Host72,Host72_pass,First_name_72,Last_name_72,Street_72,City_72,Zurich,London,11/08/2024,12/19/2024,1,on,Aisle,Business,8393892975967592,9/2
-Host73,Host73_pass,First_name_73,Last_name_73,Street_73,City_73,Seattle,Frankfurt,12/06/2024,12/31/2024,3,on,Aisle,First,7677367561168361,2/26
-Host74,Host74_pass,First_name_74,Last_name_74,Street_74,City_74,Frankfurt,London,11/21/2024,12/28/2024,2,on,Window,First,8398787944758475,5/14
-Host75,Host75_pass,First_name_75,Last_name_75,Street_75,City_75,Paris,Denver,11/23/2024,12/19/2024,1,on,Aisle,Business,8874899055557945,7/26
-Host76,Host76_pass,First_name_76,Last_name_76,Street_76,City_76,Zurich,Denver,11/27/2024,12/23/2024,3,on,Aisle,First,7591431750268927,7/19
-Host77,Host77_pass,First_name_77,Last_name_77,Street_77,City_77,London,Zurich,11/08/2024,12/17/2024,2,on,Window,First,7340219603804766,1/30
-Host78,Host78_pass,First_name_78,Last_name_78,Street_78,City_78,Sydney,Los Angeles,11/18/2024,12/13/2024,2,on,Aisle,First,2884429841013766,5/8
-Host79,Host79_pass,First_name_79,Last_name_79,Street_79,City_79,London,Denver,11/21/2024,12/27/2024,2,on,Aisle,First,9472376681877463,11/22
-Host80,Host80_pass,First_name_80,Last_name_80,Street_80,City_80,London,San Francisco,11/12/2024,12/23/2024,2,on,Window,Coach,2403012018747931,7/5
-Host81,Host81_pass,First_name_81,Last_name_81,Street_81,City_81,Denver,Paris,11/29/2024,12/27/2024,3,on,Window,First,4570249588206872,4/29
-Host82,Host82_pass,First_name_82,Last_name_82,Street_82,City_82,London,Frankfurt,11/08/2024,12/25/2024,1,,Aisle,First,8355438988959650,4/19
-Host83,Host83_pass,First_name_83,Last_name_83,Street_83,City_83,Seattle,Portland,11/27/2024,01/04/2025,2,on,Aisle,First,9377097607670460,2/4
-Host84,Host84_pass,First_name_84,Last_name_84,Street_84,City_84,Sydney,Denver,11/09/2024,12/31/2024,2,on,None,First,2014994962549410,1/23
-Host85,Host85_pass,First_name_85,Last_name_85,Street_85,City_85,Sydney,London,12/05/2024,12/15/2024,2,on,Aisle,Business,9798944835657591,8/17
-Host86,Host86_pass,First_name_86,Last_name_86,Street_86,City_86,Frankfurt,Sydney,11/14/2024,12/08/2024,3,on,Aisle,First,9104866177538224,9/19
-Host87,Host87_pass,First_name_87,Last_name_87,Street_87,City_87,Frankfurt,Paris,12/04/2024,12/10/2024,1,on,None,Business,2526850605956873,7/24
-Host88,Host88_pass,First_name_88,Last_name_88,Street_88,City_88,London,Portland,11/14/2024,12/28/2024,2,on,Aisle,First,6054305647724644,4/16
-Host89,Host89_pass,First_name_89,Last_name_89,Street_89,City_89,Seattle,San Francisco,11/09/2024,12/20/2024,1,,Aisle,Coach,2312625258565555,6/25
-Host90,Host90_pass,First_name_90,Last_name_90,Street_90,City_90,Los Angeles,Seattle,12/02/2024,12/08/2024,3,,Aisle,Business,0040240721018917,10/26
-Host91,Host91_pass,First_name_91,Last_name_91,Street_91,City_91,London,Sydney,11/28/2024,12/09/2024,1,on,Aisle,Coach,1483732862975920,9/2
-Host92,Host92_pass,First_name_92,Last_name_92,Street_92,City_92,London,Seattle,12/07/2024,12/26/2024,2,,Aisle,First,0049955255906086,11/3
-Host93,Host93_pass,First_name_93,Last_name_93,Street_93,City_93,Portland,Zurich,11/17/2024,01/05/2025,3,on,None,Business,3259271120206823,2/4
-Host94,Host94_pass,First_name_94,Last_name_94,Street_94,City_94,Los Angeles,Frankfurt,12/01/2024,12/10/2024,2,on,Window,Business,9818277188530529,10/25
-Host95,Host95_pass,First_name_95,Last_name_95,Street_95,City_95,Zurich,Seattle,11/27/2024,12/27/2024,2,,Window,First,1232390532044677,7/4
-Host96,Host96_pass,First_name_96,Last_name_96,Street_96,City_96,Paris,Zurich,11/19/2024,12/09/2024,3,on,Aisle,First,6023259952994684,1/1
-Host97,Host97_pass,First_name_97,Last_name_97,Street_97,City_97,Seattle,Denver,11/18/2024,12/12/2024,2,,Aisle,First,7334846533736531,1/5
-Host98,Host98_pass,First_name_98,Last_name_98,Street_98,City_98,Portland,Seattle,11/16/2024,12/29/2024,2,on,None,Coach,6713965325089910,9/7
-Host99,Host99_pass,First_name_99,Last_name_99,Street_99,City_99,Sydney,Denver,11/21/2024,01/02/2025,2,,Aisle,Coach,2815878787504502,7/9
-Host100,Host100_pass,First_name_100,Last_name_100,Street_100,City_100,Los Angeles,London,11/27/2024,12/31/2024,2,on,None,Business,4579759157458045,10/24
+Host1,Host1_pass,First_name_1,Last_name_1,Street_1,City_1,Portland,Zurich,11/17/2024,12/26/2024,2,on,None,First,0972005569698747,7/1
+Host2,Host2_pass,First_name_2,Last_name_2,Street_2,City_2,Portland,Zurich,11/27/2024,12/23/2024,1,on,Aisle,Business,6846054628664581,12/29
+Host3,Host3_pass,First_name_3,Last_name_3,Street_3,City_3,Portland,Paris,12/11/2024,12/24/2024,1,,None,Business,6843988852628974,8/17
+Host4,Host4_pass,First_name_4,Last_name_4,Street_4,City_4,Portland,Denver,12/11/2024,01/11/2025,1,on,Aisle,Coach,4759042688025360,4/28
+Host5,Host5_pass,First_name_5,Last_name_5,Street_5,City_5,Portland,Zurich,11/30/2024,12/28/2024,3,,None,First,5433055754455396,1/28
+Host6,Host6_pass,First_name_6,Last_name_6,Street_6,City_6,Zurich,Sydney,12/10/2024,12/31/2024,1,,None,Coach,2793296241044683,4/30
+Host7,Host7_pass,First_name_7,Last_name_7,Street_7,City_7,Denver,London,12/05/2024,12/13/2024,3,on,Window,Coach,9593223887424346,2/22
+Host8,Host8_pass,First_name_8,Last_name_8,Street_8,City_8,Zurich,Denver,12/06/2024,12/18/2024,1,on,Aisle,Business,3605411440644444,8/11
+Host9,Host9_pass,First_name_9,Last_name_9,Street_9,City_9,London,Los Angeles,11/26/2024,01/07/2025,2,on,Aisle,First,6954997761873120,10/19
+Host10,Host10_pass,First_name_10,Last_name_10,Street_10,City_10,Paris,San Francisco,11/28/2024,01/09/2025,1,on,None,First,7537031863900064,5/10
+Host11,Host11_pass,First_name_11,Last_name_11,Street_11,City_11,Zurich,London,12/09/2024,12/22/2024,3,,Aisle,First,2245569942704112,10/8
+Host12,Host12_pass,First_name_12,Last_name_12,Street_12,City_12,Zurich,London,11/15/2024,12/23/2024,3,on,None,Business,8126931682850457,8/7
+Host13,Host13_pass,First_name_13,Last_name_13,Street_13,City_13,Portland,Denver,12/05/2024,12/26/2024,3,on,Aisle,Business,5922893997497908,8/24
+Host14,Host14_pass,First_name_14,Last_name_14,Street_14,City_14,Portland,Paris,11/22/2024,01/11/2025,1,on,None,First,7885303226459051,5/7
+Host15,Host15_pass,First_name_15,Last_name_15,Street_15,City_15,Seattle,Portland,11/22/2024,12/15/2024,1,,Window,First,9597090826971259,5/5
+Host16,Host16_pass,First_name_16,Last_name_16,Street_16,City_16,London,Seattle,12/09/2024,12/30/2024,1,on,None,Business,8733777246582249,1/15
+Host17,Host17_pass,First_name_17,Last_name_17,Street_17,City_17,Seattle,Portland,12/01/2024,12/16/2024,2,on,None,First,1237351773679312,4/29
+Host18,Host18_pass,First_name_18,Last_name_18,Street_18,City_18,Denver,Zurich,12/04/2024,12/21/2024,2,on,Aisle,Coach,3319824371248405,8/17
+Host19,Host19_pass,First_name_19,Last_name_19,Street_19,City_19,London,Denver,11/23/2024,12/14/2024,2,,None,First,5774886832721647,12/30
+Host20,Host20_pass,First_name_20,Last_name_20,Street_20,City_20,Sydney,Seattle,11/14/2024,01/02/2025,2,,Window,First,7641475410128320,9/9
+Host21,Host21_pass,First_name_21,Last_name_21,Street_21,City_21,Portland,Frankfurt,11/22/2024,12/13/2024,1,on,Window,Coach,5926795726114643,9/15
+Host22,Host22_pass,First_name_22,Last_name_22,Street_22,City_22,Seattle,Portland,11/17/2024,01/11/2025,3,,None,First,4274317426166197,2/11
+Host23,Host23_pass,First_name_23,Last_name_23,Street_23,City_23,Paris,San Francisco,12/08/2024,12/17/2024,2,,Window,Business,2972840971167277,6/18
+Host24,Host24_pass,First_name_24,Last_name_24,Street_24,City_24,Frankfurt,Denver,11/21/2024,12/18/2024,1,,Aisle,First,3049686505736768,10/24
+Host25,Host25_pass,First_name_25,Last_name_25,Street_25,City_25,San Francisco,Zurich,12/02/2024,12/20/2024,3,on,Aisle,First,2869567813856856,6/29
+Host26,Host26_pass,First_name_26,Last_name_26,Street_26,City_26,San Francisco,Portland,11/25/2024,01/10/2025,1,,Aisle,Coach,9668656941593905,11/10
+Host27,Host27_pass,First_name_27,Last_name_27,Street_27,City_27,Zurich,Denver,11/21/2024,12/14/2024,2,on,Window,First,8434308436614240,3/18
+Host28,Host28_pass,First_name_28,Last_name_28,Street_28,City_28,Frankfurt,Sydney,12/10/2024,12/17/2024,3,,Aisle,Business,3421002644766890,5/14
+Host29,Host29_pass,First_name_29,Last_name_29,Street_29,City_29,Denver,London,12/12/2024,12/23/2024,3,,None,Business,4589271276338676,11/16
+Host30,Host30_pass,First_name_30,Last_name_30,Street_30,City_30,Los Angeles,Sydney,11/21/2024,01/01/2025,2,,Window,Business,1304839951258555,8/16
+Host31,Host31_pass,First_name_31,Last_name_31,Street_31,City_31,Portland,Seattle,11/26/2024,12/19/2024,2,on,None,Coach,2064932813213485,1/28
+Host32,Host32_pass,First_name_32,Last_name_32,Street_32,City_32,Sydney,Denver,12/04/2024,12/18/2024,3,on,Window,Business,9145552642449320,7/20
+Host33,Host33_pass,First_name_33,Last_name_33,Street_33,City_33,Zurich,Sydney,11/22/2024,12/31/2024,3,,Aisle,First,3895228484540263,9/2
+Host34,Host34_pass,First_name_34,Last_name_34,Street_34,City_34,Los Angeles,Denver,12/10/2024,01/06/2025,2,on,Window,Coach,0493747390738941,1/1
+Host35,Host35_pass,First_name_35,Last_name_35,Street_35,City_35,Zurich,Sydney,12/04/2024,12/26/2024,2,on,Window,Business,8649819122719874,4/22
+Host36,Host36_pass,First_name_36,Last_name_36,Street_36,City_36,Zurich,Portland,12/08/2024,12/23/2024,3,on,Window,Business,2287538236950066,5/28
+Host37,Host37_pass,First_name_37,Last_name_37,Street_37,City_37,Frankfurt,London,12/11/2024,01/09/2025,1,,Aisle,Coach,8972498713651759,7/26
+Host38,Host38_pass,First_name_38,Last_name_38,Street_38,City_38,Paris,Denver,11/18/2024,12/21/2024,3,,Window,Coach,7760135997772743,8/17
+Host39,Host39_pass,First_name_39,Last_name_39,Street_39,City_39,Denver,Frankfurt,12/06/2024,01/11/2025,3,on,Aisle,Business,0772952289068444,2/2
+Host40,Host40_pass,First_name_40,Last_name_40,Street_40,City_40,Frankfurt,Los Angeles,11/14/2024,12/15/2024,1,,Window,Coach,2370241122592018,10/11
+Host41,Host41_pass,First_name_41,Last_name_41,Street_41,City_41,Denver,Portland,12/08/2024,01/11/2025,1,,Window,First,8188383842056701,2/13
+Host42,Host42_pass,First_name_42,Last_name_42,Street_42,City_42,San Francisco,Frankfurt,12/11/2024,12/28/2024,2,on,Window,Business,3168211800156993,3/9
+Host43,Host43_pass,First_name_43,Last_name_43,Street_43,City_43,London,Zurich,11/23/2024,01/09/2025,2,,None,First,9337164498528590,1/8
+Host44,Host44_pass,First_name_44,Last_name_44,Street_44,City_44,London,Paris,11/14/2024,12/24/2024,1,,None,First,0452259527084255,10/22
+Host45,Host45_pass,First_name_45,Last_name_45,Street_45,City_45,Portland,London,11/23/2024,12/13/2024,1,on,Aisle,Business,2300478862772524,5/23
+Host46,Host46_pass,First_name_46,Last_name_46,Street_46,City_46,San Francisco,Zurich,11/24/2024,01/02/2025,1,,Aisle,First,1326234602029511,9/23
+Host47,Host47_pass,First_name_47,Last_name_47,Street_47,City_47,London,Los Angeles,12/07/2024,12/20/2024,3,,None,Business,5132919166713358,9/21
+Host48,Host48_pass,First_name_48,Last_name_48,Street_48,City_48,Zurich,Paris,11/21/2024,12/21/2024,3,,Aisle,Business,8763295588579950,4/7
+Host49,Host49_pass,First_name_49,Last_name_49,Street_49,City_49,Paris,Frankfurt,11/19/2024,12/22/2024,3,on,None,First,1983391315720266,8/13
+Host50,Host50_pass,First_name_50,Last_name_50,Street_50,City_50,London,Sydney,12/09/2024,01/02/2025,1,,Window,Business,3118312766974891,6/24
+Host51,Host51_pass,First_name_51,Last_name_51,Street_51,City_51,Portland,London,12/03/2024,01/04/2025,1,on,Aisle,Business,3578641891847458,9/3
+Host52,Host52_pass,First_name_52,Last_name_52,Street_52,City_52,Zurich,Los Angeles,12/07/2024,01/07/2025,1,,Window,Coach,9762774734354442,6/17
+Host53,Host53_pass,First_name_53,Last_name_53,Street_53,City_53,Denver,Portland,11/22/2024,12/31/2024,1,,None,First,1268844408294902,5/11
+Host54,Host54_pass,First_name_54,Last_name_54,Street_54,City_54,Sydney,London,11/28/2024,12/13/2024,1,,Aisle,Coach,7000563635913787,4/29
+Host55,Host55_pass,First_name_55,Last_name_55,Street_55,City_55,Denver,Zurich,12/12/2024,12/18/2024,1,on,None,First,1827348672401051,2/19
+Host56,Host56_pass,First_name_56,Last_name_56,Street_56,City_56,London,Denver,11/27/2024,01/01/2025,3,,Aisle,First,6926048357419637,4/17
+Host57,Host57_pass,First_name_57,Last_name_57,Street_57,City_57,Zurich,Portland,12/06/2024,01/09/2025,1,,Window,Coach,5070727245114601,11/19
+Host58,Host58_pass,First_name_58,Last_name_58,Street_58,City_58,Portland,Frankfurt,11/30/2024,12/19/2024,2,on,Window,First,3619336897735103,10/14
+Host59,Host59_pass,First_name_59,Last_name_59,Street_59,City_59,San Francisco,Frankfurt,11/24/2024,12/18/2024,1,,Aisle,First,8470640902807735,2/30
+Host60,Host60_pass,First_name_60,Last_name_60,Street_60,City_60,Portland,Los Angeles,11/13/2024,12/24/2024,3,,Window,Business,8155694976959960,8/21
+Host61,Host61_pass,First_name_61,Last_name_61,Street_61,City_61,Denver,Seattle,11/26/2024,12/17/2024,2,,Aisle,Coach,5085018795190350,2/4
+Host62,Host62_pass,First_name_62,Last_name_62,Street_62,City_62,London,Sydney,12/06/2024,12/29/2024,2,on,None,Business,4880202362793138,11/21
+Host63,Host63_pass,First_name_63,Last_name_63,Street_63,City_63,Los Angeles,Denver,12/10/2024,12/17/2024,1,,Window,First,4787024920397079,12/8
+Host64,Host64_pass,First_name_64,Last_name_64,Street_64,City_64,Los Angeles,Portland,11/21/2024,12/15/2024,3,,Aisle,Business,9370338087853871,9/22
+Host65,Host65_pass,First_name_65,Last_name_65,Street_65,City_65,Denver,San Francisco,11/27/2024,12/15/2024,2,on,Window,Coach,8986624315190177,6/24
+Host66,Host66_pass,First_name_66,Last_name_66,Street_66,City_66,Sydney,Denver,11/25/2024,01/11/2025,1,on,None,First,8353430692567697,1/11
+Host67,Host67_pass,First_name_67,Last_name_67,Street_67,City_67,London,Seattle,11/20/2024,12/30/2024,1,,None,First,4315018797155866,9/8
+Host68,Host68_pass,First_name_68,Last_name_68,Street_68,City_68,Sydney,Paris,11/14/2024,12/14/2024,3,on,None,Coach,2921208656193064,5/5
+Host69,Host69_pass,First_name_69,Last_name_69,Street_69,City_69,Frankfurt,Los Angeles,11/29/2024,12/13/2024,1,,Aisle,Business,1404051840724453,5/17
+Host70,Host70_pass,First_name_70,Last_name_70,Street_70,City_70,Frankfurt,Seattle,11/21/2024,01/10/2025,1,,Window,First,4250251442974527,1/22
+Host71,Host71_pass,First_name_71,Last_name_71,Street_71,City_71,Sydney,Los Angeles,11/25/2024,01/05/2025,3,on,Window,Coach,5602537647783783,4/2
+Host72,Host72_pass,First_name_72,Last_name_72,Street_72,City_72,Zurich,Denver,12/06/2024,12/27/2024,3,,None,First,6726451079240202,3/27
+Host73,Host73_pass,First_name_73,Last_name_73,Street_73,City_73,London,Denver,12/05/2024,01/01/2025,1,,Window,First,3899003966821235,1/3
+Host74,Host74_pass,First_name_74,Last_name_74,Street_74,City_74,Los Angeles,Denver,11/18/2024,12/29/2024,2,,Window,Business,4262192510999324,7/6
+Host75,Host75_pass,First_name_75,Last_name_75,Street_75,City_75,Zurich,Paris,11/26/2024,12/25/2024,3,on,Window,Business,3057826877859161,7/6
+Host76,Host76_pass,First_name_76,Last_name_76,Street_76,City_76,London,Zurich,12/09/2024,12/13/2024,1,on,Aisle,Coach,1483436838582011,4/16
+Host77,Host77_pass,First_name_77,Last_name_77,Street_77,City_77,Los Angeles,Denver,11/24/2024,12/18/2024,3,on,Aisle,Business,9773235960758090,2/27
+Host78,Host78_pass,First_name_78,Last_name_78,Street_78,City_78,Frankfurt,Paris,12/01/2024,12/16/2024,2,on,Window,Coach,3239130742478137,12/24
+Host79,Host79_pass,First_name_79,Last_name_79,Street_79,City_79,Paris,Frankfurt,11/22/2024,12/28/2024,1,on,None,Coach,8240217323299311,4/10
+Host80,Host80_pass,First_name_80,Last_name_80,Street_80,City_80,Los Angeles,Seattle,12/09/2024,12/19/2024,1,,None,First,7777464584396820,1/1
+Host81,Host81_pass,First_name_81,Last_name_81,Street_81,City_81,San Francisco,Zurich,11/28/2024,12/23/2024,3,on,None,First,4268799082056433,6/3
+Host82,Host82_pass,First_name_82,Last_name_82,Street_82,City_82,Denver,Paris,11/14/2024,12/17/2024,1,,None,First,0751889503414409,11/22
+Host83,Host83_pass,First_name_83,Last_name_83,Street_83,City_83,Frankfurt,Portland,12/07/2024,01/10/2025,1,on,Aisle,Coach,8537389310256551,7/16
+Host84,Host84_pass,First_name_84,Last_name_84,Street_84,City_84,Portland,Los Angeles,12/12/2024,12/15/2024,2,on,Window,Coach,6818777784149347,5/13
+Host85,Host85_pass,First_name_85,Last_name_85,Street_85,City_85,Sydney,Frankfurt,11/23/2024,12/20/2024,2,on,None,Business,7345742780194327,5/12
+Host86,Host86_pass,First_name_86,Last_name_86,Street_86,City_86,Los Angeles,Zurich,12/01/2024,12/27/2024,3,,Aisle,Coach,6112817130853554,9/19
+Host87,Host87_pass,First_name_87,Last_name_87,Street_87,City_87,Denver,San Francisco,11/15/2024,12/13/2024,3,on,None,First,5103271060584860,11/28
+Host88,Host88_pass,First_name_88,Last_name_88,Street_88,City_88,Denver,Paris,12/09/2024,12/27/2024,1,,None,Business,0917236176559353,5/5
+Host89,Host89_pass,First_name_89,Last_name_89,Street_89,City_89,Paris,Los Angeles,12/10/2024,12/29/2024,1,,Window,Business,0805868149648618,1/22
+Host90,Host90_pass,First_name_90,Last_name_90,Street_90,City_90,Paris,Zurich,12/11/2024,01/03/2025,2,,None,First,9467530325843689,6/16
+Host91,Host91_pass,First_name_91,Last_name_91,Street_91,City_91,Los Angeles,Zurich,11/16/2024,01/10/2025,1,,None,First,8765208547406182,10/21
+Host92,Host92_pass,First_name_92,Last_name_92,Street_92,City_92,Frankfurt,Portland,12/12/2024,01/06/2025,3,,None,Coach,1021571290184734,6/6
+Host93,Host93_pass,First_name_93,Last_name_93,Street_93,City_93,Paris,Sydney,11/14/2024,12/29/2024,2,on,None,Coach,9293368544064004,10/2
+Host94,Host94_pass,First_name_94,Last_name_94,Street_94,City_94,Denver,Paris,11/26/2024,01/09/2025,3,,None,First,1374434397849448,4/29
+Host95,Host95_pass,First_name_95,Last_name_95,Street_95,City_95,Denver,San Francisco,11/14/2024,01/02/2025,2,on,None,Coach,5838849758992239,9/6
+Host96,Host96_pass,First_name_96,Last_name_96,Street_96,City_96,Sydney,Portland,11/19/2024,12/20/2024,3,on,Window,Business,3838213208786518,2/22
+Host97,Host97_pass,First_name_97,Last_name_97,Street_97,City_97,Sydney,Portland,11/24/2024,12/14/2024,3,on,Aisle,Business,0591304664497793,9/29
+Host98,Host98_pass,First_name_98,Last_name_98,Street_98,City_98,London,Frankfurt,12/11/2024,12/13/2024,2,on,None,Coach,1742073137527382,1/8
+Host99,Host99_pass,First_name_99,Last_name_99,Street_99,City_99,Portland,Zurich,11/25/2024,12/15/2024,1,,None,Business,5090615139309528,5/29
+Host100,Host100_pass,First_name_100,Last_name_100,Street_100,City_100,Denver,Frankfurt,12/10/2024,12/21/2024,3,on,None,First,0595906636546524,1/5
+Host101,Host101_pass,First_name_101,Last_name_101,Street_101,City_101,Frankfurt,Zurich,11/24/2024,01/10/2025,1,,Aisle,Business,8404881490676590,6/2
+Host102,Host102_pass,First_name_102,Last_name_102,Street_102,City_102,Frankfurt,San Francisco,11/30/2024,12/14/2024,3,on,Window,Coach,0575130220757852,6/13
+Host103,Host103_pass,First_name_103,Last_name_103,Street_103,City_103,Seattle,Denver,12/11/2024,01/02/2025,1,on,Aisle,Business,2461885053265978,1/29
+Host104,Host104_pass,First_name_104,Last_name_104,Street_104,City_104,Paris,San Francisco,11/13/2024,12/20/2024,2,on,None,Coach,4200754932914019,2/30
+Host105,Host105_pass,First_name_105,Last_name_105,Street_105,City_105,Los Angeles,Sydney,12/06/2024,12/13/2024,1,on,None,Coach,5881773146778019,6/27
+Host106,Host106_pass,First_name_106,Last_name_106,Street_106,City_106,Denver,Paris,11/13/2024,12/15/2024,1,on,Aisle,Business,2273868963971360,12/28
+Host107,Host107_pass,First_name_107,Last_name_107,Street_107,City_107,Zurich,San Francisco,11/27/2024,01/04/2025,1,on,Window,First,3160225285427293,6/19
+Host108,Host108_pass,First_name_108,Last_name_108,Street_108,City_108,San Francisco,Frankfurt,11/22/2024,01/03/2025,2,on,Window,First,8109224572477526,4/30
+Host109,Host109_pass,First_name_109,Last_name_109,Street_109,City_109,San Francisco,Frankfurt,12/11/2024,01/01/2025,2,on,None,First,8369977065385327,6/28
+Host110,Host110_pass,First_name_110,Last_name_110,Street_110,City_110,London,Denver,12/03/2024,12/24/2024,3,,None,First,0328847153733097,1/10
+Host111,Host111_pass,First_name_111,Last_name_111,Street_111,City_111,Frankfurt,London,11/27/2024,01/03/2025,2,,None,Coach,9136152754660423,4/9
+Host112,Host112_pass,First_name_112,Last_name_112,Street_112,City_112,Sydney,Frankfurt,11/25/2024,01/01/2025,1,,Aisle,Business,3455215578252614,10/13
+Host113,Host113_pass,First_name_113,Last_name_113,Street_113,City_113,Paris,Sydney,11/17/2024,12/18/2024,3,on,Window,Business,0585591905512017,2/10
+Host114,Host114_pass,First_name_114,Last_name_114,Street_114,City_114,Zurich,Frankfurt,11/28/2024,12/22/2024,1,on,None,First,6089796153008653,6/29
+Host115,Host115_pass,First_name_115,Last_name_115,Street_115,City_115,Zurich,San Francisco,11/20/2024,12/16/2024,3,,Window,First,6527453726617411,8/21
+Host116,Host116_pass,First_name_116,Last_name_116,Street_116,City_116,Paris,Seattle,11/16/2024,01/01/2025,3,on,Aisle,Coach,7587986005469867,1/26
+Host117,Host117_pass,First_name_117,Last_name_117,Street_117,City_117,Sydney,San Francisco,11/23/2024,12/28/2024,1,,Aisle,First,3217776030931424,2/13
+Host118,Host118_pass,First_name_118,Last_name_118,Street_118,City_118,Paris,Los Angeles,12/10/2024,01/08/2025,3,on,Aisle,Business,2077796495954188,12/21
+Host119,Host119_pass,First_name_119,Last_name_119,Street_119,City_119,Portland,Los Angeles,12/11/2024,01/10/2025,1,on,None,Coach,2224469068249348,3/10
+Host120,Host120_pass,First_name_120,Last_name_120,Street_120,City_120,Paris,Sydney,11/26/2024,12/29/2024,2,on,None,Business,2052371455753585,4/29
+Host121,Host121_pass,First_name_121,Last_name_121,Street_121,City_121,Seattle,Portland,11/28/2024,01/01/2025,3,,None,Coach,5077239909800779,11/10
+Host122,Host122_pass,First_name_122,Last_name_122,Street_122,City_122,London,Portland,12/01/2024,01/11/2025,1,on,Aisle,Business,7162982228547929,6/29
+Host123,Host123_pass,First_name_123,Last_name_123,Street_123,City_123,Paris,Portland,12/10/2024,12/31/2024,3,,Window,Business,6568483797261936,7/12
+Host124,Host124_pass,First_name_124,Last_name_124,Street_124,City_124,Sydney,Zurich,12/11/2024,01/05/2025,3,on,Window,Business,9922689909153792,8/17
+Host125,Host125_pass,First_name_125,Last_name_125,Street_125,City_125,Seattle,Sydney,11/27/2024,12/26/2024,1,on,Aisle,Coach,7197972987524965,10/3
+Host126,Host126_pass,First_name_126,Last_name_126,Street_126,City_126,Frankfurt,Zurich,12/06/2024,12/24/2024,3,on,None,First,2645732342761668,2/27
+Host127,Host127_pass,First_name_127,Last_name_127,Street_127,City_127,Frankfurt,Seattle,12/05/2024,01/02/2025,3,on,Window,Business,1195611451058388,8/8
+Host128,Host128_pass,First_name_128,Last_name_128,Street_128,City_128,San Francisco,Paris,11/30/2024,12/25/2024,2,on,Aisle,Business,3039048838298546,12/27
+Host129,Host129_pass,First_name_129,Last_name_129,Street_129,City_129,Sydney,London,11/30/2024,12/22/2024,3,on,Window,Coach,3185032281550236,6/30
+Host130,Host130_pass,First_name_130,Last_name_130,Street_130,City_130,Seattle,Frankfurt,12/12/2024,12/15/2024,2,on,None,Coach,5433249068298296,2/16
+Host131,Host131_pass,First_name_131,Last_name_131,Street_131,City_131,Zurich,Los Angeles,11/22/2024,12/30/2024,3,,Aisle,First,2290335481965406,9/11
+Host132,Host132_pass,First_name_132,Last_name_132,Street_132,City_132,San Francisco,London,11/13/2024,01/10/2025,2,on,None,Coach,1079295885107347,3/22
+Host133,Host133_pass,First_name_133,Last_name_133,Street_133,City_133,Paris,Sydney,12/03/2024,12/13/2024,2,,None,Coach,3955725980961837,8/5
+Host134,Host134_pass,First_name_134,Last_name_134,Street_134,City_134,Portland,Sydney,11/19/2024,12/16/2024,1,,None,Coach,5135702567502808,12/28
+Host135,Host135_pass,First_name_135,Last_name_135,Street_135,City_135,Portland,Zurich,11/30/2024,12/24/2024,3,,Window,Coach,8915445128554744,3/30
+Host136,Host136_pass,First_name_136,Last_name_136,Street_136,City_136,Frankfurt,London,11/29/2024,12/14/2024,1,,Aisle,First,0784827101931408,2/8
+Host137,Host137_pass,First_name_137,Last_name_137,Street_137,City_137,Paris,Sydney,11/23/2024,12/22/2024,3,,Aisle,First,6519721748367377,6/3
+Host138,Host138_pass,First_name_138,Last_name_138,Street_138,City_138,Denver,Paris,12/05/2024,12/25/2024,2,on,None,Coach,9836073663643913,8/23
+Host139,Host139_pass,First_name_139,Last_name_139,Street_139,City_139,Zurich,Frankfurt,11/20/2024,01/08/2025,2,on,None,Coach,9611182356961023,3/9
+Host140,Host140_pass,First_name_140,Last_name_140,Street_140,City_140,Zurich,Sydney,12/12/2024,12/23/2024,3,,Aisle,Business,6894213631333692,4/3
+Host141,Host141_pass,First_name_141,Last_name_141,Street_141,City_141,Los Angeles,Paris,11/14/2024,01/09/2025,3,on,Aisle,Business,1757739604833036,5/6
+Host142,Host142_pass,First_name_142,Last_name_142,Street_142,City_142,Frankfurt,Paris,11/18/2024,12/17/2024,3,on,Aisle,Coach,1733182559041314,2/23
+Host143,Host143_pass,First_name_143,Last_name_143,Street_143,City_143,Paris,Frankfurt,11/29/2024,01/02/2025,1,,Aisle,Business,4222186743008693,4/11
+Host144,Host144_pass,First_name_144,Last_name_144,Street_144,City_144,Portland,Los Angeles,11/24/2024,01/03/2025,3,on,None,First,8377034438834831,8/22
+Host145,Host145_pass,First_name_145,Last_name_145,Street_145,City_145,Paris,San Francisco,12/02/2024,12/24/2024,1,on,None,Business,8853994645852622,7/14
+Host146,Host146_pass,First_name_146,Last_name_146,Street_146,City_146,Denver,Los Angeles,12/08/2024,01/05/2025,2,on,Window,Business,3112249020486259,6/8
+Host147,Host147_pass,First_name_147,Last_name_147,Street_147,City_147,Sydney,Zurich,12/08/2024,12/28/2024,3,,Window,Business,0963896212738384,7/11
+Host148,Host148_pass,First_name_148,Last_name_148,Street_148,City_148,Los Angeles,Paris,12/03/2024,01/07/2025,2,on,Window,Business,6124198219610226,5/4
+Host149,Host149_pass,First_name_149,Last_name_149,Street_149,City_149,London,San Francisco,12/08/2024,12/21/2024,3,on,None,Coach,2568305901615003,8/27
+Host150,Host150_pass,First_name_150,Last_name_150,Street_150,City_150,Denver,Sydney,11/29/2024,12/30/2024,2,on,None,Business,5779772375932571,9/26
+Host151,Host151_pass,First_name_151,Last_name_151,Street_151,City_151,Seattle,Sydney,12/12/2024,12/24/2024,1,on,Window,First,4359977212959628,6/28
+Host152,Host152_pass,First_name_152,Last_name_152,Street_152,City_152,Paris,Los Angeles,11/14/2024,01/10/2025,2,,Window,Business,1247549185154022,10/9
+Host153,Host153_pass,First_name_153,Last_name_153,Street_153,City_153,Sydney,San Francisco,11/28/2024,12/24/2024,3,,None,Business,0173424255862505,4/1
+Host154,Host154_pass,First_name_154,Last_name_154,Street_154,City_154,Denver,Los Angeles,12/11/2024,12/24/2024,2,on,None,First,7770556194522822,3/28
+Host155,Host155_pass,First_name_155,Last_name_155,Street_155,City_155,San Francisco,Denver,12/11/2024,12/18/2024,3,,Aisle,First,1456957409629133,7/13
+Host156,Host156_pass,First_name_156,Last_name_156,Street_156,City_156,Sydney,Denver,11/29/2024,12/15/2024,2,on,None,First,3939443521007527,1/22
+Host157,Host157_pass,First_name_157,Last_name_157,Street_157,City_157,San Francisco,Seattle,11/27/2024,01/02/2025,3,,Aisle,Business,7504376272713852,4/16
+Host158,Host158_pass,First_name_158,Last_name_158,Street_158,City_158,Paris,Seattle,11/22/2024,12/30/2024,2,,Aisle,Business,0668401772086005,9/23
+Host159,Host159_pass,First_name_159,Last_name_159,Street_159,City_159,Frankfurt,Zurich,12/08/2024,12/22/2024,2,on,Window,Business,5836358246653301,1/4
+Host160,Host160_pass,First_name_160,Last_name_160,Street_160,City_160,Denver,Zurich,11/28/2024,12/31/2024,2,,Aisle,First,7302917571640165,10/30
+Host161,Host161_pass,First_name_161,Last_name_161,Street_161,City_161,Sydney,San Francisco,11/20/2024,12/18/2024,1,on,Aisle,Business,1925660712107447,9/6
+Host162,Host162_pass,First_name_162,Last_name_162,Street_162,City_162,Los Angeles,Sydney,11/19/2024,12/31/2024,2,on,Aisle,First,0754218652994487,9/2
+Host163,Host163_pass,First_name_163,Last_name_163,Street_163,City_163,San Francisco,Seattle,12/09/2024,12/18/2024,2,on,Window,First,8652469681822381,3/2
+Host164,Host164_pass,First_name_164,Last_name_164,Street_164,City_164,London,Zurich,11/27/2024,12/16/2024,1,,None,First,2662091305305804,5/22
+Host165,Host165_pass,First_name_165,Last_name_165,Street_165,City_165,Sydney,London,12/10/2024,01/11/2025,3,on,None,Coach,0319302699040929,12/2
+Host166,Host166_pass,First_name_166,Last_name_166,Street_166,City_166,Los Angeles,Frankfurt,11/20/2024,12/16/2024,2,,Aisle,Coach,6027854484268496,2/12
+Host167,Host167_pass,First_name_167,Last_name_167,Street_167,City_167,Zurich,Frankfurt,11/29/2024,12/17/2024,1,,Window,First,0179072376345436,9/2
+Host168,Host168_pass,First_name_168,Last_name_168,Street_168,City_168,Seattle,Zurich,11/21/2024,12/17/2024,2,,Aisle,First,6466073785353627,10/14
+Host169,Host169_pass,First_name_169,Last_name_169,Street_169,City_169,San Francisco,Sydney,11/17/2024,12/28/2024,2,on,None,Coach,6104441025662908,8/8
+Host170,Host170_pass,First_name_170,Last_name_170,Street_170,City_170,Frankfurt,London,11/25/2024,12/18/2024,2,,Window,Coach,0217096762438540,2/20
+Host171,Host171_pass,First_name_171,Last_name_171,Street_171,City_171,Portland,Frankfurt,11/23/2024,12/29/2024,1,on,None,Coach,0726330498814368,4/25
+Host172,Host172_pass,First_name_172,Last_name_172,Street_172,City_172,London,San Francisco,11/15/2024,12/31/2024,2,,Window,Business,9286849328574787,10/7
+Host173,Host173_pass,First_name_173,Last_name_173,Street_173,City_173,Paris,Los Angeles,11/30/2024,12/27/2024,2,,None,First,1883087194512802,11/7
+Host174,Host174_pass,First_name_174,Last_name_174,Street_174,City_174,Los Angeles,Zurich,11/20/2024,01/03/2025,3,on,Aisle,Coach,4951960196583021,10/28
+Host175,Host175_pass,First_name_175,Last_name_175,Street_175,City_175,Paris,Portland,11/22/2024,01/04/2025,3,,None,Business,9415846388455906,7/1
+Host176,Host176_pass,First_name_176,Last_name_176,Street_176,City_176,Zurich,Los Angeles,11/16/2024,12/20/2024,2,,Window,Coach,5225431033588545,1/19
+Host177,Host177_pass,First_name_177,Last_name_177,Street_177,City_177,Seattle,London,12/05/2024,01/08/2025,3,on,None,Coach,0305470988083352,5/14
+Host178,Host178_pass,First_name_178,Last_name_178,Street_178,City_178,Portland,Paris,12/01/2024,01/04/2025,2,,None,First,8019768023014113,2/25
+Host179,Host179_pass,First_name_179,Last_name_179,Street_179,City_179,San Francisco,Denver,11/22/2024,01/02/2025,3,,Aisle,Business,1757947823221635,7/26
+Host180,Host180_pass,First_name_180,Last_name_180,Street_180,City_180,Portland,Seattle,12/09/2024,12/17/2024,3,on,None,First,4502203640288119,3/6
+Host181,Host181_pass,First_name_181,Last_name_181,Street_181,City_181,Paris,Seattle,11/22/2024,01/08/2025,2,on,None,Business,2262479491923000,12/3
+Host182,Host182_pass,First_name_182,Last_name_182,Street_182,City_182,Seattle,Zurich,12/01/2024,01/02/2025,3,,Window,Coach,8609566268857076,2/22
+Host183,Host183_pass,First_name_183,Last_name_183,Street_183,City_183,Denver,San Francisco,12/10/2024,01/04/2025,3,,Aisle,Coach,4411196162977369,2/24
+Host184,Host184_pass,First_name_184,Last_name_184,Street_184,City_184,London,Seattle,12/09/2024,12/13/2024,3,,Aisle,First,0518652168860998,7/15
+Host185,Host185_pass,First_name_185,Last_name_185,Street_185,City_185,San Francisco,Denver,12/07/2024,12/30/2024,3,on,None,First,0923769230592186,11/12
+Host186,Host186_pass,First_name_186,Last_name_186,Street_186,City_186,Denver,Zurich,11/18/2024,12/18/2024,1,on,Window,Coach,8888937351800008,1/6
+Host187,Host187_pass,First_name_187,Last_name_187,Street_187,City_187,Seattle,Frankfurt,11/22/2024,12/15/2024,1,,Window,First,0162001702371000,9/26
+Host188,Host188_pass,First_name_188,Last_name_188,Street_188,City_188,London,Sydney,11/13/2024,01/06/2025,2,,Window,First,8152764301493955,12/15
+Host189,Host189_pass,First_name_189,Last_name_189,Street_189,City_189,Sydney,Seattle,11/22/2024,12/18/2024,2,,Window,Coach,2914318850274411,5/8
+Host190,Host190_pass,First_name_190,Last_name_190,Street_190,City_190,Portland,Frankfurt,11/26/2024,12/31/2024,3,on,Aisle,Coach,1912355925180081,12/26
+Host191,Host191_pass,First_name_191,Last_name_191,Street_191,City_191,Seattle,Zurich,11/16/2024,12/29/2024,1,,None,First,2873032232019978,6/9
+Host192,Host192_pass,First_name_192,Last_name_192,Street_192,City_192,London,Zurich,12/09/2024,12/21/2024,1,on,Aisle,Business,2979871509986836,7/12
+Host193,Host193_pass,First_name_193,Last_name_193,Street_193,City_193,Portland,San Francisco,11/26/2024,12/27/2024,2,,Aisle,Coach,7551520447418771,2/27
+Host194,Host194_pass,First_name_194,Last_name_194,Street_194,City_194,Portland,Frankfurt,11/19/2024,01/10/2025,2,on,Aisle,Business,9218520759525717,10/23
+Host195,Host195_pass,First_name_195,Last_name_195,Street_195,City_195,London,Portland,11/15/2024,01/09/2025,2,,None,Coach,3554070340117698,3/8
+Host196,Host196_pass,First_name_196,Last_name_196,Street_196,City_196,Seattle,London,11/30/2024,01/07/2025,2,,Window,First,4138785846017383,9/1
+Host197,Host197_pass,First_name_197,Last_name_197,Street_197,City_197,London,San Francisco,12/11/2024,12/27/2024,2,,Aisle,Coach,8312878904630879,5/18
+Host198,Host198_pass,First_name_198,Last_name_198,Street_198,City_198,Seattle,Denver,11/22/2024,12/20/2024,2,on,Aisle,First,7388693870475797,10/9
+Host199,Host199_pass,First_name_199,Last_name_199,Street_199,City_199,Los Angeles,Sydney,11/20/2024,01/06/2025,2,on,Aisle,Coach,2041753202922086,1/24
+Host200,Host200_pass,First_name_200,Last_name_200,Street_200,City_200,Los Angeles,Paris,12/12/2024,01/07/2025,1,,Aisle,Business,3814945741283771,7/18
+Host201,Host201_pass,First_name_201,Last_name_201,Street_201,City_201,Frankfurt,San Francisco,12/07/2024,12/28/2024,3,on,Aisle,Business,9080131761545398,12/2
+Host202,Host202_pass,First_name_202,Last_name_202,Street_202,City_202,Zurich,London,12/12/2024,12/15/2024,2,,Aisle,Business,6018167567232225,10/7
+Host203,Host203_pass,First_name_203,Last_name_203,Street_203,City_203,Los Angeles,Paris,12/04/2024,01/08/2025,3,on,Aisle,Coach,7882931807934089,1/2
+Host204,Host204_pass,First_name_204,Last_name_204,Street_204,City_204,Los Angeles,San Francisco,11/14/2024,12/29/2024,2,on,Aisle,First,7695230407328446,7/28
+Host205,Host205_pass,First_name_205,Last_name_205,Street_205,City_205,Zurich,London,12/01/2024,01/02/2025,2,on,None,First,4501213440968531,10/13
+Host206,Host206_pass,First_name_206,Last_name_206,Street_206,City_206,San Francisco,Seattle,11/16/2024,12/16/2024,2,,None,Business,2187584609810553,4/1
+Host207,Host207_pass,First_name_207,Last_name_207,Street_207,City_207,Zurich,London,12/05/2024,12/15/2024,3,,Window,Business,4626338430711245,2/2
+Host208,Host208_pass,First_name_208,Last_name_208,Street_208,City_208,Los Angeles,San Francisco,12/07/2024,12/31/2024,2,,Window,Coach,5766796183293351,4/22
+Host209,Host209_pass,First_name_209,Last_name_209,Street_209,City_209,Denver,Seattle,12/07/2024,01/01/2025,1,,None,Business,1548694671249410,3/10
+Host210,Host210_pass,First_name_210,Last_name_210,Street_210,City_210,Paris,London,12/06/2024,12/30/2024,1,on,Window,First,3077016243871643,2/9
+Host211,Host211_pass,First_name_211,Last_name_211,Street_211,City_211,Denver,Sydney,11/30/2024,12/19/2024,3,on,Window,Business,6262050057019406,3/7
+Host212,Host212_pass,First_name_212,Last_name_212,Street_212,City_212,Denver,Frankfurt,11/15/2024,12/22/2024,3,,Aisle,Business,7795278611702068,6/12
+Host213,Host213_pass,First_name_213,Last_name_213,Street_213,City_213,Seattle,San Francisco,12/01/2024,12/26/2024,2,on,Window,Business,4731062613197295,12/24
+Host214,Host214_pass,First_name_214,Last_name_214,Street_214,City_214,Denver,Frankfurt,11/30/2024,01/07/2025,1,,None,Coach,1485075330801581,9/22
+Host215,Host215_pass,First_name_215,Last_name_215,Street_215,City_215,London,Denver,12/11/2024,12/27/2024,3,,Aisle,Coach,4708652722605971,3/24
+Host216,Host216_pass,First_name_216,Last_name_216,Street_216,City_216,London,Zurich,11/30/2024,12/15/2024,1,,None,Coach,1209928016753914,4/21
+Host217,Host217_pass,First_name_217,Last_name_217,Street_217,City_217,Portland,Paris,12/12/2024,12/17/2024,1,,Aisle,Business,5673187964605328,2/2
+Host218,Host218_pass,First_name_218,Last_name_218,Street_218,City_218,Frankfurt,San Francisco,11/20/2024,01/04/2025,2,on,Aisle,First,8394078117880962,2/12
+Host219,Host219_pass,First_name_219,Last_name_219,Street_219,City_219,London,Los Angeles,11/23/2024,01/03/2025,1,on,None,Business,1418653624906558,4/26
+Host220,Host220_pass,First_name_220,Last_name_220,Street_220,City_220,Denver,San Francisco,12/06/2024,01/10/2025,3,,Window,Business,7157096176038306,5/25
+Host221,Host221_pass,First_name_221,Last_name_221,Street_221,City_221,Los Angeles,Frankfurt,11/27/2024,12/20/2024,2,on,Window,Coach,1579431730180656,2/28
+Host222,Host222_pass,First_name_222,Last_name_222,Street_222,City_222,Sydney,Los Angeles,11/22/2024,12/27/2024,3,,None,First,2853512502269698,9/6
+Host223,Host223_pass,First_name_223,Last_name_223,Street_223,City_223,Zurich,London,11/29/2024,01/03/2025,2,,None,Business,9431406637224926,10/11
+Host224,Host224_pass,First_name_224,Last_name_224,Street_224,City_224,Los Angeles,Zurich,11/20/2024,12/22/2024,1,on,Aisle,First,8115158272547931,3/24
+Host225,Host225_pass,First_name_225,Last_name_225,Street_225,City_225,Portland,Frankfurt,12/08/2024,12/19/2024,2,on,None,First,5568997284046159,2/7
+Host226,Host226_pass,First_name_226,Last_name_226,Street_226,City_226,Denver,Paris,11/15/2024,12/27/2024,1,on,Window,Coach,6543224228308570,7/15
+Host227,Host227_pass,First_name_227,Last_name_227,Street_227,City_227,San Francisco,Zurich,12/08/2024,12/20/2024,1,,None,Business,5783908782193323,7/17
+Host228,Host228_pass,First_name_228,Last_name_228,Street_228,City_228,Seattle,Frankfurt,12/05/2024,01/07/2025,1,,Window,First,9234739157992800,3/30
+Host229,Host229_pass,First_name_229,Last_name_229,Street_229,City_229,Seattle,Portland,12/11/2024,01/08/2025,2,,None,First,3163292105101587,12/18
+Host230,Host230_pass,First_name_230,Last_name_230,Street_230,City_230,Zurich,Paris,11/27/2024,01/10/2025,3,on,Aisle,First,9386230196585578,2/25
+Host231,Host231_pass,First_name_231,Last_name_231,Street_231,City_231,Seattle,Portland,11/30/2024,12/30/2024,1,on,Window,Coach,7141932099321698,11/20
+Host232,Host232_pass,First_name_232,Last_name_232,Street_232,City_232,Denver,Zurich,12/09/2024,01/01/2025,1,on,None,Coach,8527513646069687,10/20
+Host233,Host233_pass,First_name_233,Last_name_233,Street_233,City_233,Seattle,Frankfurt,12/06/2024,12/29/2024,2,,Window,Business,1211674711769006,10/29
+Host234,Host234_pass,First_name_234,Last_name_234,Street_234,City_234,Denver,Paris,11/17/2024,12/17/2024,1,on,Aisle,Business,8542352652580248,1/10
+Host235,Host235_pass,First_name_235,Last_name_235,Street_235,City_235,Zurich,Los Angeles,12/04/2024,12/26/2024,3,on,Aisle,Business,2905078708889510,7/28
+Host236,Host236_pass,First_name_236,Last_name_236,Street_236,City_236,Zurich,Frankfurt,11/23/2024,01/02/2025,3,,Window,First,3074391802775101,12/25
+Host237,Host237_pass,First_name_237,Last_name_237,Street_237,City_237,Los Angeles,Seattle,12/02/2024,12/31/2024,3,,Window,Business,1710293582106492,12/27
+Host238,Host238_pass,First_name_238,Last_name_238,Street_238,City_238,London,Portland,12/07/2024,01/07/2025,2,,Window,Business,5201150056448975,9/10
+Host239,Host239_pass,First_name_239,Last_name_239,Street_239,City_239,San Francisco,Los Angeles,11/30/2024,12/30/2024,1,on,None,Business,1949061756949011,8/10
+Host240,Host240_pass,First_name_240,Last_name_240,Street_240,City_240,Sydney,Frankfurt,12/03/2024,12/24/2024,2,on,None,First,0526477252297251,6/7
+Host241,Host241_pass,First_name_241,Last_name_241,Street_241,City_241,London,Denver,11/18/2024,01/02/2025,2,,Aisle,Coach,9877837112216320,9/17
+Host242,Host242_pass,First_name_242,Last_name_242,Street_242,City_242,Los Angeles,Denver,12/07/2024,01/05/2025,2,on,Aisle,Business,7806594118408526,7/7
+Host243,Host243_pass,First_name_243,Last_name_243,Street_243,City_243,Denver,Sydney,11/23/2024,12/22/2024,2,on,Aisle,Coach,1806692726535280,12/20
+Host244,Host244_pass,First_name_244,Last_name_244,Street_244,City_244,Seattle,Frankfurt,12/08/2024,12/14/2024,2,on,None,Coach,6063795918190421,8/23
+Host245,Host245_pass,First_name_245,Last_name_245,Street_245,City_245,Zurich,Los Angeles,12/11/2024,01/07/2025,1,,Aisle,Business,7087612374641612,1/4
+Host246,Host246_pass,First_name_246,Last_name_246,Street_246,City_246,Paris,Portland,12/01/2024,01/09/2025,1,on,None,Coach,8522770319352753,3/21
+Host247,Host247_pass,First_name_247,Last_name_247,Street_247,City_247,Denver,Los Angeles,12/07/2024,12/28/2024,3,,Window,Business,5588333600482593,5/15
+Host248,Host248_pass,First_name_248,Last_name_248,Street_248,City_248,Zurich,Sydney,11/19/2024,12/29/2024,1,,None,Business,5428057720767666,5/4
+Host249,Host249_pass,First_name_249,Last_name_249,Street_249,City_249,Seattle,Zurich,12/12/2024,12/24/2024,1,,Window,Coach,3160505684269125,11/4
+Host250,Host250_pass,First_name_250,Last_name_250,Street_250,City_250,San Francisco,London,11/29/2024,12/15/2024,1,,None,Business,1763525027651145,7/13
+Host251,Host251_pass,First_name_251,Last_name_251,Street_251,City_251,Zurich,Paris,12/04/2024,12/19/2024,2,on,None,Coach,8691455531450082,8/20
+Host252,Host252_pass,First_name_252,Last_name_252,Street_252,City_252,San Francisco,Frankfurt,12/03/2024,12/16/2024,2,,None,First,1217802851716044,3/27
+Host253,Host253_pass,First_name_253,Last_name_253,Street_253,City_253,Sydney,Denver,12/10/2024,01/01/2025,3,,Window,First,1399451206423498,2/4
+Host254,Host254_pass,First_name_254,Last_name_254,Street_254,City_254,Los Angeles,Frankfurt,12/11/2024,01/01/2025,3,on,Window,Business,2441682521794345,1/8
+Host255,Host255_pass,First_name_255,Last_name_255,Street_255,City_255,Zurich,London,11/23/2024,12/19/2024,3,,None,Coach,9687707296666658,2/14
+Host256,Host256_pass,First_name_256,Last_name_256,Street_256,City_256,Zurich,Portland,12/02/2024,01/05/2025,2,,None,First,1369155894783262,10/20
+Host257,Host257_pass,First_name_257,Last_name_257,Street_257,City_257,Seattle,San Francisco,11/20/2024,12/28/2024,1,on,Window,Business,5976442766452638,5/12
+Host258,Host258_pass,First_name_258,Last_name_258,Street_258,City_258,Los Angeles,Sydney,11/23/2024,12/30/2024,2,,Window,First,8778563787494548,9/27
+Host259,Host259_pass,First_name_259,Last_name_259,Street_259,City_259,Los Angeles,London,11/19/2024,01/07/2025,2,on,Aisle,Coach,7908506488779603,11/20
+Host260,Host260_pass,First_name_260,Last_name_260,Street_260,City_260,Denver,Los Angeles,12/02/2024,12/29/2024,3,on,Aisle,Coach,5568407245536254,2/30
+Host261,Host261_pass,First_name_261,Last_name_261,Street_261,City_261,Los Angeles,Seattle,11/20/2024,12/31/2024,1,on,Window,First,9366566454489990,5/21
+Host262,Host262_pass,First_name_262,Last_name_262,Street_262,City_262,Sydney,Frankfurt,11/25/2024,01/03/2025,3,on,None,Business,2351442678282239,10/2
+Host263,Host263_pass,First_name_263,Last_name_263,Street_263,City_263,Denver,Sydney,11/14/2024,12/17/2024,2,,Window,Coach,0788159986382639,7/23
+Host264,Host264_pass,First_name_264,Last_name_264,Street_264,City_264,Sydney,Frankfurt,11/26/2024,12/26/2024,3,,None,Coach,1682071735132023,6/12
+Host265,Host265_pass,First_name_265,Last_name_265,Street_265,City_265,San Francisco,Frankfurt,11/24/2024,01/06/2025,2,on,None,Business,7676151146177386,1/12
+Host266,Host266_pass,First_name_266,Last_name_266,Street_266,City_266,Los Angeles,Zurich,11/19/2024,12/19/2024,3,,None,Coach,9661552967801215,11/8
+Host267,Host267_pass,First_name_267,Last_name_267,Street_267,City_267,London,Sydney,11/17/2024,01/05/2025,1,on,Window,First,6999197240558481,10/13
+Host268,Host268_pass,First_name_268,Last_name_268,Street_268,City_268,Zurich,San Francisco,11/17/2024,12/17/2024,3,,Aisle,Business,8658822324390334,8/14
+Host269,Host269_pass,First_name_269,Last_name_269,Street_269,City_269,London,Zurich,12/09/2024,12/22/2024,3,,None,Business,8362474953159014,10/15
+Host270,Host270_pass,First_name_270,Last_name_270,Street_270,City_270,Los Angeles,Seattle,12/11/2024,12/21/2024,3,,Aisle,First,4532712529074168,5/29
+Host271,Host271_pass,First_name_271,Last_name_271,Street_271,City_271,Los Angeles,Seattle,12/06/2024,01/04/2025,2,on,Aisle,Coach,4140201201130932,4/27
+Host272,Host272_pass,First_name_272,Last_name_272,Street_272,City_272,Seattle,Sydney,11/25/2024,12/21/2024,3,on,Window,First,6722188641326632,3/13
+Host273,Host273_pass,First_name_273,Last_name_273,Street_273,City_273,Paris,Frankfurt,11/18/2024,01/11/2025,1,on,None,Business,2617688439172427,10/4
+Host274,Host274_pass,First_name_274,Last_name_274,Street_274,City_274,Portland,London,11/24/2024,12/26/2024,3,,Aisle,Coach,2153707357603832,3/24
+Host275,Host275_pass,First_name_275,Last_name_275,Street_275,City_275,Los Angeles,Paris,11/17/2024,01/08/2025,3,,None,First,6404948741407287,5/17
+Host276,Host276_pass,First_name_276,Last_name_276,Street_276,City_276,Frankfurt,Seattle,12/12/2024,12/27/2024,1,on,Aisle,Business,9931966808830225,1/10
+Host277,Host277_pass,First_name_277,Last_name_277,Street_277,City_277,Sydney,Frankfurt,12/03/2024,12/22/2024,3,on,Window,Business,1289052313384292,9/22
+Host278,Host278_pass,First_name_278,Last_name_278,Street_278,City_278,London,Paris,11/24/2024,12/19/2024,2,,None,First,6030990420400065,12/24
+Host279,Host279_pass,First_name_279,Last_name_279,Street_279,City_279,Denver,Sydney,11/19/2024,01/08/2025,3,,Aisle,Coach,5620050733187613,11/11
+Host280,Host280_pass,First_name_280,Last_name_280,Street_280,City_280,San Francisco,London,12/11/2024,12/19/2024,1,on,None,Business,1450399577993664,3/10
+Host281,Host281_pass,First_name_281,Last_name_281,Street_281,City_281,London,Denver,11/24/2024,12/26/2024,1,,None,Business,5549196899006554,10/18
+Host282,Host282_pass,First_name_282,Last_name_282,Street_282,City_282,Los Angeles,Seattle,11/21/2024,12/28/2024,3,on,Aisle,Coach,1582407071372651,1/24
+Host283,Host283_pass,First_name_283,Last_name_283,Street_283,City_283,Portland,San Francisco,11/22/2024,01/09/2025,2,on,Window,Coach,7813803722061983,9/20
+Host284,Host284_pass,First_name_284,Last_name_284,Street_284,City_284,Seattle,San Francisco,11/28/2024,12/25/2024,3,,Window,Business,8899991052899315,7/11
+Host285,Host285_pass,First_name_285,Last_name_285,Street_285,City_285,Seattle,Frankfurt,12/06/2024,12/13/2024,1,on,Aisle,Business,2923766248037547,1/10
+Host286,Host286_pass,First_name_286,Last_name_286,Street_286,City_286,London,Paris,12/12/2024,01/05/2025,2,,None,First,1446626058422472,4/23
+Host287,Host287_pass,First_name_287,Last_name_287,Street_287,City_287,San Francisco,Portland,12/07/2024,12/18/2024,3,on,None,Coach,1605616636424530,12/20
+Host288,Host288_pass,First_name_288,Last_name_288,Street_288,City_288,Sydney,Los Angeles,11/13/2024,01/06/2025,3,,None,First,8297006554314609,5/29
+Host289,Host289_pass,First_name_289,Last_name_289,Street_289,City_289,Denver,Zurich,11/28/2024,12/31/2024,3,on,Window,First,0769832715854234,6/26
+Host290,Host290_pass,First_name_290,Last_name_290,Street_290,City_290,Portland,London,11/23/2024,12/27/2024,3,,Aisle,Coach,0272938820300252,3/15
+Host291,Host291_pass,First_name_291,Last_name_291,Street_291,City_291,Portland,Denver,11/23/2024,01/06/2025,1,on,Window,Coach,0185305556108808,5/21
+Host292,Host292_pass,First_name_292,Last_name_292,Street_292,City_292,Frankfurt,San Francisco,12/08/2024,12/28/2024,1,,Window,Business,2656985518455001,9/6
+Host293,Host293_pass,First_name_293,Last_name_293,Street_293,City_293,San Francisco,Seattle,11/21/2024,12/17/2024,3,on,Window,First,1606613462546196,9/30
+Host294,Host294_pass,First_name_294,Last_name_294,Street_294,City_294,Portland,Sydney,12/05/2024,12/13/2024,1,on,None,Business,8402775174764119,1/9
+Host295,Host295_pass,First_name_295,Last_name_295,Street_295,City_295,London,Denver,11/25/2024,12/31/2024,2,,None,Coach,0598386369587099,7/8
+Host296,Host296_pass,First_name_296,Last_name_296,Street_296,City_296,Sydney,London,11/22/2024,12/26/2024,2,on,None,Business,2441114535938344,12/12
+Host297,Host297_pass,First_name_297,Last_name_297,Street_297,City_297,San Francisco,Seattle,11/20/2024,12/18/2024,3,on,None,Business,3783089228635662,3/19
+Host298,Host298_pass,First_name_298,Last_name_298,Street_298,City_298,Portland,Zurich,12/07/2024,01/06/2025,1,,Window,Business,4072178163378180,1/12
+Host299,Host299_pass,First_name_299,Last_name_299,Street_299,City_299,Denver,Paris,11/30/2024,12/24/2024,3,,Aisle,Coach,9454454074015946,2/29
+Host300,Host300_pass,First_name_300,Last_name_300,Street_300,City_300,Portland,London,12/04/2024,12/13/2024,3,on,Aisle,Coach,8959947331821100,1/4
+Host301,Host301_pass,First_name_301,Last_name_301,Street_301,City_301,Sydney,Zurich,11/26/2024,12/31/2024,2,,Aisle,First,4431457716965978,7/3
+Host302,Host302_pass,First_name_302,Last_name_302,Street_302,City_302,Paris,Sydney,12/09/2024,12/26/2024,3,on,Aisle,First,4541361584141871,1/17
+Host303,Host303_pass,First_name_303,Last_name_303,Street_303,City_303,Portland,Paris,11/20/2024,12/16/2024,2,on,Aisle,Business,8626576910585896,12/13
+Host304,Host304_pass,First_name_304,Last_name_304,Street_304,City_304,London,Seattle,12/08/2024,12/21/2024,1,on,None,Coach,2255786771695941,3/7
+Host305,Host305_pass,First_name_305,Last_name_305,Street_305,City_305,Frankfurt,London,11/30/2024,12/17/2024,2,,Aisle,Coach,9964977556684777,7/26
+Host306,Host306_pass,First_name_306,Last_name_306,Street_306,City_306,Los Angeles,Portland,11/22/2024,01/03/2025,2,on,None,Business,8909600189513601,10/28
+Host307,Host307_pass,First_name_307,Last_name_307,Street_307,City_307,Paris,San Francisco,12/06/2024,12/22/2024,1,,Aisle,Business,5944357830315683,10/4
+Host308,Host308_pass,First_name_308,Last_name_308,Street_308,City_308,Denver,Paris,12/07/2024,12/20/2024,1,on,Aisle,First,8289124156931047,2/20
+Host309,Host309_pass,First_name_309,Last_name_309,Street_309,City_309,Zurich,London,12/07/2024,12/14/2024,1,on,Window,First,0350594977182198,12/6
+Host310,Host310_pass,First_name_310,Last_name_310,Street_310,City_310,Zurich,Sydney,11/18/2024,12/30/2024,1,,Aisle,Coach,5790232790043059,2/21
+Host311,Host311_pass,First_name_311,Last_name_311,Street_311,City_311,London,Los Angeles,11/20/2024,12/23/2024,3,,Aisle,First,7799192607466643,3/20
+Host312,Host312_pass,First_name_312,Last_name_312,Street_312,City_312,Sydney,Denver,11/16/2024,01/11/2025,1,on,Aisle,Coach,5294708411853883,3/3
+Host313,Host313_pass,First_name_313,Last_name_313,Street_313,City_313,Portland,London,12/02/2024,12/22/2024,1,,Window,Coach,0577251101080766,7/16
+Host314,Host314_pass,First_name_314,Last_name_314,Street_314,City_314,Zurich,Paris,12/05/2024,12/15/2024,2,,Window,First,0524764098910303,9/1
+Host315,Host315_pass,First_name_315,Last_name_315,Street_315,City_315,Seattle,Denver,11/29/2024,12/20/2024,1,on,Window,Coach,4002402371043924,7/5
+Host316,Host316_pass,First_name_316,Last_name_316,Street_316,City_316,Zurich,London,11/15/2024,12/16/2024,3,,Aisle,Business,8059839238489715,8/13
+Host317,Host317_pass,First_name_317,Last_name_317,Street_317,City_317,Seattle,Sydney,11/20/2024,12/20/2024,3,,Window,Coach,8953449994133631,4/28
+Host318,Host318_pass,First_name_318,Last_name_318,Street_318,City_318,Paris,Zurich,12/04/2024,12/15/2024,1,on,None,Coach,4252694997625470,3/1
+Host319,Host319_pass,First_name_319,Last_name_319,Street_319,City_319,Paris,Los Angeles,11/22/2024,01/07/2025,3,,Window,First,8570904818591399,11/9
+Host320,Host320_pass,First_name_320,Last_name_320,Street_320,City_320,Sydney,Paris,12/06/2024,12/15/2024,2,,Window,First,2532074346504244,2/8
+Host321,Host321_pass,First_name_321,Last_name_321,Street_321,City_321,London,Sydney,12/06/2024,12/28/2024,2,on,None,Business,7824254749440746,4/20
+Host322,Host322_pass,First_name_322,Last_name_322,Street_322,City_322,San Francisco,Denver,11/30/2024,12/17/2024,2,on,Aisle,First,5822095639411309,5/11
+Host323,Host323_pass,First_name_323,Last_name_323,Street_323,City_323,Los Angeles,Portland,11/24/2024,12/14/2024,2,on,Aisle,Coach,6632485135710244,8/26
+Host324,Host324_pass,First_name_324,Last_name_324,Street_324,City_324,Paris,San Francisco,12/02/2024,12/21/2024,2,,None,First,2141105859053342,1/8
+Host325,Host325_pass,First_name_325,Last_name_325,Street_325,City_325,Denver,Seattle,11/13/2024,01/04/2025,2,,Window,First,8853524938053617,4/2
+Host326,Host326_pass,First_name_326,Last_name_326,Street_326,City_326,Zurich,London,12/09/2024,12/22/2024,2,,Aisle,Coach,3019388069145753,5/21
+Host327,Host327_pass,First_name_327,Last_name_327,Street_327,City_327,Portland,Frankfurt,11/20/2024,12/22/2024,3,,None,Business,8583402899524475,4/26
+Host328,Host328_pass,First_name_328,Last_name_328,Street_328,City_328,Portland,San Francisco,11/30/2024,01/03/2025,2,,Aisle,Business,5569197595657990,9/8
+Host329,Host329_pass,First_name_329,Last_name_329,Street_329,City_329,Frankfurt,Paris,12/07/2024,01/11/2025,3,,Aisle,First,9495901671847451,3/8
+Host330,Host330_pass,First_name_330,Last_name_330,Street_330,City_330,Frankfurt,San Francisco,12/12/2024,12/21/2024,2,,None,Business,7332524824157945,9/26
+Host331,Host331_pass,First_name_331,Last_name_331,Street_331,City_331,Zurich,San Francisco,11/22/2024,12/15/2024,1,on,Aisle,First,6380922456045841,7/9
+Host332,Host332_pass,First_name_332,Last_name_332,Street_332,City_332,London,Portland,11/14/2024,01/06/2025,3,on,Window,First,1274485725768733,2/24
+Host333,Host333_pass,First_name_333,Last_name_333,Street_333,City_333,London,Frankfurt,11/18/2024,01/03/2025,2,on,Window,First,9281394325053209,8/29
+Host334,Host334_pass,First_name_334,Last_name_334,Street_334,City_334,Sydney,Paris,11/26/2024,12/21/2024,2,,Window,First,5148473985961936,6/16
+Host335,Host335_pass,First_name_335,Last_name_335,Street_335,City_335,Zurich,Denver,11/30/2024,01/09/2025,1,on,Aisle,First,5153982396933348,8/21
+Host336,Host336_pass,First_name_336,Last_name_336,Street_336,City_336,Frankfurt,Denver,11/25/2024,12/17/2024,1,on,Window,First,5758410101003518,12/21
+Host337,Host337_pass,First_name_337,Last_name_337,Street_337,City_337,Frankfurt,Paris,11/24/2024,12/21/2024,2,on,Window,Business,6496165703872671,6/27
+Host338,Host338_pass,First_name_338,Last_name_338,Street_338,City_338,Portland,Denver,12/12/2024,12/27/2024,1,on,Window,Business,6105907579426747,11/24
+Host339,Host339_pass,First_name_339,Last_name_339,Street_339,City_339,Frankfurt,San Francisco,11/21/2024,12/25/2024,2,on,Aisle,Coach,5207974097957435,8/21
+Host340,Host340_pass,First_name_340,Last_name_340,Street_340,City_340,Los Angeles,Portland,12/08/2024,01/03/2025,1,,Aisle,First,2297532272203316,6/26
+Host341,Host341_pass,First_name_341,Last_name_341,Street_341,City_341,San Francisco,Sydney,12/01/2024,12/21/2024,2,on,Window,First,3017749945446645,7/27
+Host342,Host342_pass,First_name_342,Last_name_342,Street_342,City_342,Portland,Denver,12/03/2024,01/11/2025,3,on,Window,Coach,8271756446410911,1/6
+Host343,Host343_pass,First_name_343,Last_name_343,Street_343,City_343,Los Angeles,London,11/28/2024,12/30/2024,1,on,Window,Coach,6510553440036257,10/27
+Host344,Host344_pass,First_name_344,Last_name_344,Street_344,City_344,Denver,London,11/22/2024,01/05/2025,3,,Window,Business,4759868852287083,7/17
+Host345,Host345_pass,First_name_345,Last_name_345,Street_345,City_345,Sydney,London,12/04/2024,12/17/2024,1,on,Window,Coach,7730264118809509,3/8
+Host346,Host346_pass,First_name_346,Last_name_346,Street_346,City_346,Seattle,Frankfurt,11/25/2024,01/02/2025,1,on,Aisle,Coach,0543024597231878,12/26
+Host347,Host347_pass,First_name_347,Last_name_347,Street_347,City_347,Paris,Zurich,12/12/2024,01/08/2025,1,on,Aisle,Business,0219830704049420,5/11
+Host348,Host348_pass,First_name_348,Last_name_348,Street_348,City_348,Portland,Los Angeles,11/26/2024,12/26/2024,3,,Window,Business,8453679802734705,8/30
+Host349,Host349_pass,First_name_349,Last_name_349,Street_349,City_349,Seattle,Paris,12/09/2024,12/29/2024,3,on,Window,Business,0789357057838971,8/20
+Host350,Host350_pass,First_name_350,Last_name_350,Street_350,City_350,Portland,Zurich,11/26/2024,01/02/2025,1,on,Aisle,First,3559592319889759,8/25
+Host351,Host351_pass,First_name_351,Last_name_351,Street_351,City_351,Zurich,Sydney,12/01/2024,01/03/2025,1,,None,Business,5609109370247212,11/29
+Host352,Host352_pass,First_name_352,Last_name_352,Street_352,City_352,London,Sydney,12/06/2024,01/03/2025,2,on,Window,Business,6575659409010039,2/5
+Host353,Host353_pass,First_name_353,Last_name_353,Street_353,City_353,Sydney,Zurich,12/08/2024,12/22/2024,1,on,None,Business,1500666382035738,4/18
+Host354,Host354_pass,First_name_354,Last_name_354,Street_354,City_354,Frankfurt,Seattle,12/03/2024,01/08/2025,2,on,Aisle,First,5466244730914377,12/17
+Host355,Host355_pass,First_name_355,Last_name_355,Street_355,City_355,Portland,Frankfurt,12/08/2024,01/10/2025,2,on,None,Business,1705396041570617,2/3
+Host356,Host356_pass,First_name_356,Last_name_356,Street_356,City_356,Paris,Seattle,11/29/2024,01/01/2025,2,on,Window,First,7939477336048439,10/10
+Host357,Host357_pass,First_name_357,Last_name_357,Street_357,City_357,London,San Francisco,12/07/2024,12/25/2024,1,on,None,Business,4022880856914683,1/5
+Host358,Host358_pass,First_name_358,Last_name_358,Street_358,City_358,Portland,London,12/11/2024,12/18/2024,3,,Aisle,First,1061734766476228,3/25
+Host359,Host359_pass,First_name_359,Last_name_359,Street_359,City_359,Frankfurt,Denver,12/09/2024,12/24/2024,3,on,Aisle,Coach,0855597902481903,2/8
+Host360,Host360_pass,First_name_360,Last_name_360,Street_360,City_360,Portland,Frankfurt,11/23/2024,12/30/2024,3,on,None,Business,7154129444874965,2/26
+Host361,Host361_pass,First_name_361,Last_name_361,Street_361,City_361,Paris,Sydney,11/30/2024,01/02/2025,1,on,Aisle,Business,0659037912614430,1/20
+Host362,Host362_pass,First_name_362,Last_name_362,Street_362,City_362,Zurich,Portland,12/09/2024,01/05/2025,3,on,Aisle,Coach,4729467398700664,8/28
+Host363,Host363_pass,First_name_363,Last_name_363,Street_363,City_363,Frankfurt,Zurich,12/02/2024,01/09/2025,3,,Window,First,1779931713559740,2/5
+Host364,Host364_pass,First_name_364,Last_name_364,Street_364,City_364,London,Portland,11/28/2024,01/09/2025,1,,Aisle,Business,2347953758747736,9/1
+Host365,Host365_pass,First_name_365,Last_name_365,Street_365,City_365,Seattle,Portland,11/24/2024,12/27/2024,3,on,None,Coach,9311565366388087,6/4
+Host366,Host366_pass,First_name_366,Last_name_366,Street_366,City_366,Paris,San Francisco,12/12/2024,01/02/2025,2,on,None,First,9803734197600195,1/13
+Host367,Host367_pass,First_name_367,Last_name_367,Street_367,City_367,Seattle,Portland,12/09/2024,01/05/2025,1,,Aisle,Coach,7038206356222445,3/29
+Host368,Host368_pass,First_name_368,Last_name_368,Street_368,City_368,Paris,Portland,11/26/2024,12/25/2024,2,on,Aisle,Business,4179405745098346,4/30
+Host369,Host369_pass,First_name_369,Last_name_369,Street_369,City_369,Frankfurt,Sydney,11/13/2024,12/29/2024,3,on,Aisle,First,0248241048107250,4/25
+Host370,Host370_pass,First_name_370,Last_name_370,Street_370,City_370,Frankfurt,London,11/16/2024,01/06/2025,1,,None,First,1613046681751294,10/18
+Host371,Host371_pass,First_name_371,Last_name_371,Street_371,City_371,Zurich,Denver,11/19/2024,12/13/2024,2,,None,Coach,2178414324439441,6/6
+Host372,Host372_pass,First_name_372,Last_name_372,Street_372,City_372,Denver,Sydney,11/28/2024,01/05/2025,1,,Aisle,First,2661716127783539,2/20
+Host373,Host373_pass,First_name_373,Last_name_373,Street_373,City_373,Los Angeles,Zurich,11/30/2024,01/01/2025,1,,Window,Coach,6847175762289885,7/1
+Host374,Host374_pass,First_name_374,Last_name_374,Street_374,City_374,Sydney,London,12/10/2024,01/06/2025,1,,None,First,0492007361813917,3/7
+Host375,Host375_pass,First_name_375,Last_name_375,Street_375,City_375,London,Sydney,11/29/2024,12/27/2024,2,,None,Coach,9601947838087719,12/30
+Host376,Host376_pass,First_name_376,Last_name_376,Street_376,City_376,Frankfurt,Portland,12/11/2024,01/06/2025,3,on,None,First,1415610840061240,3/15
+Host377,Host377_pass,First_name_377,Last_name_377,Street_377,City_377,Los Angeles,Seattle,12/04/2024,12/25/2024,1,,None,Coach,2478508206613438,9/2
+Host378,Host378_pass,First_name_378,Last_name_378,Street_378,City_378,Frankfurt,Sydney,12/03/2024,12/13/2024,3,on,None,First,7304340758908575,11/25
+Host379,Host379_pass,First_name_379,Last_name_379,Street_379,City_379,Frankfurt,Seattle,11/27/2024,12/20/2024,1,on,Aisle,First,0176839224132927,10/20
+Host380,Host380_pass,First_name_380,Last_name_380,Street_380,City_380,Frankfurt,Sydney,11/23/2024,01/10/2025,1,,Aisle,Coach,2365821188119351,6/20
+Host381,Host381_pass,First_name_381,Last_name_381,Street_381,City_381,Seattle,Los Angeles,11/19/2024,01/01/2025,1,on,Window,Coach,6102825554961865,8/1
+Host382,Host382_pass,First_name_382,Last_name_382,Street_382,City_382,Portland,Paris,11/28/2024,01/11/2025,2,,Aisle,Coach,9947508107859955,9/21
+Host383,Host383_pass,First_name_383,Last_name_383,Street_383,City_383,London,Sydney,11/19/2024,12/24/2024,1,,Aisle,Business,9378122424617202,12/25
+Host384,Host384_pass,First_name_384,Last_name_384,Street_384,City_384,Seattle,Zurich,11/25/2024,01/06/2025,2,,Aisle,Coach,4882136401941863,2/27
+Host385,Host385_pass,First_name_385,Last_name_385,Street_385,City_385,Frankfurt,Los Angeles,11/20/2024,12/18/2024,2,on,None,Business,7559855273134638,6/5
+Host386,Host386_pass,First_name_386,Last_name_386,Street_386,City_386,Sydney,Seattle,11/13/2024,12/31/2024,3,,None,Coach,8441265014339823,6/15
+Host387,Host387_pass,First_name_387,Last_name_387,Street_387,City_387,Denver,San Francisco,12/10/2024,01/04/2025,2,,None,Coach,8391214064345457,7/30
+Host388,Host388_pass,First_name_388,Last_name_388,Street_388,City_388,Portland,Zurich,11/29/2024,12/25/2024,2,,Window,Coach,8249617850161392,4/10
+Host389,Host389_pass,First_name_389,Last_name_389,Street_389,City_389,London,Frankfurt,12/03/2024,01/11/2025,2,on,Window,Coach,4077336121845870,8/24
+Host390,Host390_pass,First_name_390,Last_name_390,Street_390,City_390,London,Zurich,12/08/2024,01/03/2025,1,,Aisle,Business,9452182415373770,6/20
+Host391,Host391_pass,First_name_391,Last_name_391,Street_391,City_391,London,Portland,11/16/2024,12/22/2024,2,,Aisle,Coach,0255661597560036,9/25
+Host392,Host392_pass,First_name_392,Last_name_392,Street_392,City_392,Seattle,Paris,12/08/2024,12/29/2024,1,,None,First,3598949722819010,7/8
+Host393,Host393_pass,First_name_393,Last_name_393,Street_393,City_393,Seattle,Zurich,12/01/2024,01/09/2025,3,,Window,First,4923299345087808,5/1
+Host394,Host394_pass,First_name_394,Last_name_394,Street_394,City_394,Los Angeles,London,11/23/2024,12/25/2024,1,,Aisle,Business,0400638418192164,5/3
+Host395,Host395_pass,First_name_395,Last_name_395,Street_395,City_395,Seattle,Sydney,12/07/2024,12/26/2024,1,,Aisle,Business,9103269001001574,11/3
+Host396,Host396_pass,First_name_396,Last_name_396,Street_396,City_396,London,Seattle,12/07/2024,01/07/2025,2,on,None,Business,9108388334854436,9/13
+Host397,Host397_pass,First_name_397,Last_name_397,Street_397,City_397,Seattle,Paris,11/14/2024,12/30/2024,2,on,Aisle,Coach,4487976545280166,9/12
+Host398,Host398_pass,First_name_398,Last_name_398,Street_398,City_398,San Francisco,Los Angeles,12/10/2024,01/03/2025,3,on,None,Business,8607366214548349,10/15
+Host399,Host399_pass,First_name_399,Last_name_399,Street_399,City_399,Denver,Zurich,12/09/2024,01/02/2025,3,on,None,Coach,5076658542034713,5/1
+Host400,Host400_pass,First_name_400,Last_name_400,Street_400,City_400,San Francisco,Portland,11/26/2024,01/01/2025,3,,None,Business,1211379970266553,12/30
+Host401,Host401_pass,First_name_401,Last_name_401,Street_401,City_401,Frankfurt,London,11/22/2024,01/02/2025,3,on,None,First,2009584010437484,1/22
+Host402,Host402_pass,First_name_402,Last_name_402,Street_402,City_402,Sydney,Frankfurt,12/11/2024,12/26/2024,2,,Window,Business,9235049323259856,8/9
+Host403,Host403_pass,First_name_403,Last_name_403,Street_403,City_403,San Francisco,Seattle,11/29/2024,01/01/2025,2,on,None,Coach,9630578854194226,8/6
+Host404,Host404_pass,First_name_404,Last_name_404,Street_404,City_404,Seattle,Portland,11/13/2024,01/05/2025,3,on,Aisle,Business,5571876165614460,10/25
+Host405,Host405_pass,First_name_405,Last_name_405,Street_405,City_405,Frankfurt,Zurich,11/25/2024,12/22/2024,2,,None,Business,7063092582600495,7/17
+Host406,Host406_pass,First_name_406,Last_name_406,Street_406,City_406,Los Angeles,Denver,11/17/2024,12/30/2024,1,,Aisle,First,4701802931742546,6/17
+Host407,Host407_pass,First_name_407,Last_name_407,Street_407,City_407,Zurich,Denver,11/29/2024,12/20/2024,2,on,None,Coach,6271085756327308,8/28
+Host408,Host408_pass,First_name_408,Last_name_408,Street_408,City_408,Denver,Zurich,11/18/2024,12/27/2024,3,on,Window,Coach,0750025147849717,12/6
+Host409,Host409_pass,First_name_409,Last_name_409,Street_409,City_409,Paris,Seattle,12/12/2024,01/04/2025,3,,Window,First,3144618587753091,8/8
+Host410,Host410_pass,First_name_410,Last_name_410,Street_410,City_410,Zurich,Sydney,12/11/2024,01/08/2025,1,on,Aisle,First,3605917662775953,10/11
+Host411,Host411_pass,First_name_411,Last_name_411,Street_411,City_411,Paris,Los Angeles,11/24/2024,01/06/2025,3,on,Aisle,First,4643152196264124,12/19
+Host412,Host412_pass,First_name_412,Last_name_412,Street_412,City_412,Los Angeles,Portland,11/26/2024,01/04/2025,2,,Aisle,Coach,7402879083316122,9/25
+Host413,Host413_pass,First_name_413,Last_name_413,Street_413,City_413,San Francisco,London,11/27/2024,12/25/2024,1,on,Aisle,Coach,7034372728466631,10/29
+Host414,Host414_pass,First_name_414,Last_name_414,Street_414,City_414,Denver,Portland,11/13/2024,12/23/2024,3,on,Aisle,Business,1302661995597698,9/4
+Host415,Host415_pass,First_name_415,Last_name_415,Street_415,City_415,Frankfurt,Sydney,11/14/2024,01/09/2025,1,on,None,Coach,7435616790402205,5/20
+Host416,Host416_pass,First_name_416,Last_name_416,Street_416,City_416,Zurich,London,11/17/2024,01/01/2025,3,,Aisle,First,9157786263684074,3/16
+Host417,Host417_pass,First_name_417,Last_name_417,Street_417,City_417,Sydney,San Francisco,11/25/2024,12/20/2024,2,,Aisle,First,5473614319075079,2/22
+Host418,Host418_pass,First_name_418,Last_name_418,Street_418,City_418,Los Angeles,San Francisco,12/03/2024,01/03/2025,3,,Aisle,Coach,3490852842479259,2/19
+Host419,Host419_pass,First_name_419,Last_name_419,Street_419,City_419,Los Angeles,Sydney,11/24/2024,12/15/2024,2,on,None,First,9272782884154549,9/17
+Host420,Host420_pass,First_name_420,Last_name_420,Street_420,City_420,Zurich,London,12/06/2024,12/20/2024,1,,Aisle,Coach,6278671665487939,5/24
+Host421,Host421_pass,First_name_421,Last_name_421,Street_421,City_421,San Francisco,Seattle,11/18/2024,12/30/2024,3,on,Window,First,7433272877556370,7/22
+Host422,Host422_pass,First_name_422,Last_name_422,Street_422,City_422,Portland,Seattle,12/02/2024,12/27/2024,3,on,None,Business,9973541080580183,1/18
+Host423,Host423_pass,First_name_423,Last_name_423,Street_423,City_423,Seattle,Sydney,12/08/2024,12/29/2024,2,on,None,First,1532834647085027,4/3
+Host424,Host424_pass,First_name_424,Last_name_424,Street_424,City_424,Portland,Seattle,11/23/2024,12/26/2024,2,on,Window,Business,9466505300922235,3/17
+Host425,Host425_pass,First_name_425,Last_name_425,Street_425,City_425,Zurich,London,11/27/2024,01/04/2025,3,,Window,First,0777665468724344,2/6
+Host426,Host426_pass,First_name_426,Last_name_426,Street_426,City_426,Portland,Denver,12/02/2024,01/01/2025,2,,None,Business,7506316995220235,6/3
+Host427,Host427_pass,First_name_427,Last_name_427,Street_427,City_427,Denver,San Francisco,11/25/2024,12/28/2024,3,on,Aisle,Coach,3710388004297241,7/28
+Host428,Host428_pass,First_name_428,Last_name_428,Street_428,City_428,Portland,Frankfurt,11/27/2024,01/05/2025,2,,None,First,1290569370538577,8/13
+Host429,Host429_pass,First_name_429,Last_name_429,Street_429,City_429,Sydney,Portland,12/02/2024,01/04/2025,3,,Aisle,First,4557691938341996,9/16
+Host430,Host430_pass,First_name_430,Last_name_430,Street_430,City_430,Frankfurt,Zurich,12/10/2024,01/07/2025,3,on,Window,Coach,8864387540862143,2/28
+Host431,Host431_pass,First_name_431,Last_name_431,Street_431,City_431,Frankfurt,Zurich,11/30/2024,12/26/2024,2,,Window,First,4291157643941088,2/21
+Host432,Host432_pass,First_name_432,Last_name_432,Street_432,City_432,Zurich,Paris,11/24/2024,12/16/2024,2,on,Window,First,6191239126783389,5/14
+Host433,Host433_pass,First_name_433,Last_name_433,Street_433,City_433,Denver,Zurich,11/15/2024,12/21/2024,2,on,Window,First,7724628355100058,10/15
+Host434,Host434_pass,First_name_434,Last_name_434,Street_434,City_434,San Francisco,Los Angeles,11/24/2024,12/21/2024,3,on,Aisle,First,8297891184727668,10/24
+Host435,Host435_pass,First_name_435,Last_name_435,Street_435,City_435,Denver,Los Angeles,12/04/2024,12/27/2024,1,,None,Coach,4768976369446298,7/20
+Host436,Host436_pass,First_name_436,Last_name_436,Street_436,City_436,Denver,Los Angeles,11/13/2024,01/04/2025,3,,Aisle,First,3729723755203849,9/23
+Host437,Host437_pass,First_name_437,Last_name_437,Street_437,City_437,Los Angeles,Paris,12/12/2024,12/18/2024,3,,Window,Coach,6139754331038956,3/7
+Host438,Host438_pass,First_name_438,Last_name_438,Street_438,City_438,Paris,Zurich,11/19/2024,12/31/2024,3,,Aisle,Business,4039886016677253,4/28
+Host439,Host439_pass,First_name_439,Last_name_439,Street_439,City_439,Zurich,Frankfurt,11/18/2024,12/14/2024,2,on,Aisle,Coach,6535900131051191,1/30
+Host440,Host440_pass,First_name_440,Last_name_440,Street_440,City_440,Los Angeles,Frankfurt,11/19/2024,12/18/2024,3,on,Window,First,5317165666207231,8/13
+Host441,Host441_pass,First_name_441,Last_name_441,Street_441,City_441,Frankfurt,London,11/24/2024,12/26/2024,1,,Window,Coach,7138328151568285,9/12
+Host442,Host442_pass,First_name_442,Last_name_442,Street_442,City_442,Seattle,Paris,11/24/2024,12/28/2024,2,on,Window,Coach,3411632620173047,7/3
+Host443,Host443_pass,First_name_443,Last_name_443,Street_443,City_443,Seattle,London,12/11/2024,12/27/2024,1,on,None,Coach,3111417618862768,11/30
+Host444,Host444_pass,First_name_444,Last_name_444,Street_444,City_444,Sydney,San Francisco,12/03/2024,12/23/2024,1,,None,Coach,0061787540127093,11/4
+Host445,Host445_pass,First_name_445,Last_name_445,Street_445,City_445,Sydney,Seattle,11/15/2024,01/01/2025,3,on,Aisle,First,3378239713059884,5/11
+Host446,Host446_pass,First_name_446,Last_name_446,Street_446,City_446,Frankfurt,Paris,11/17/2024,01/02/2025,2,,Aisle,Coach,0359715801124145,11/20
+Host447,Host447_pass,First_name_447,Last_name_447,Street_447,City_447,Sydney,Frankfurt,12/11/2024,12/27/2024,3,,Aisle,Business,7243183140548214,6/10
+Host448,Host448_pass,First_name_448,Last_name_448,Street_448,City_448,Zurich,Seattle,11/14/2024,12/17/2024,2,on,Window,Coach,6970111082505128,2/8
+Host449,Host449_pass,First_name_449,Last_name_449,Street_449,City_449,Seattle,Frankfurt,11/13/2024,01/11/2025,2,,None,Coach,7742712691002924,9/24
+Host450,Host450_pass,First_name_450,Last_name_450,Street_450,City_450,Portland,Zurich,11/26/2024,12/21/2024,3,,None,Coach,1242113082595079,8/22
+Host451,Host451_pass,First_name_451,Last_name_451,Street_451,City_451,Seattle,Los Angeles,11/25/2024,01/09/2025,3,,None,Coach,0645921776432000,4/21
+Host452,Host452_pass,First_name_452,Last_name_452,Street_452,City_452,Paris,London,11/17/2024,12/25/2024,3,on,Window,Business,6227859658489948,2/22
+Host453,Host453_pass,First_name_453,Last_name_453,Street_453,City_453,Seattle,Los Angeles,11/23/2024,12/16/2024,2,on,Window,Business,6742546409975902,7/26
+Host454,Host454_pass,First_name_454,Last_name_454,Street_454,City_454,Paris,Los Angeles,11/17/2024,12/19/2024,1,on,Aisle,First,8747683806855758,3/28
+Host455,Host455_pass,First_name_455,Last_name_455,Street_455,City_455,Denver,Zurich,12/01/2024,12/14/2024,2,on,Aisle,Business,4696005449501895,2/12
+Host456,Host456_pass,First_name_456,Last_name_456,Street_456,City_456,Zurich,Denver,12/06/2024,12/16/2024,1,,Window,Coach,5037965068789963,1/11
+Host457,Host457_pass,First_name_457,Last_name_457,Street_457,City_457,San Francisco,Seattle,12/09/2024,12/23/2024,1,on,Aisle,Business,6031522689694155,2/24
+Host458,Host458_pass,First_name_458,Last_name_458,Street_458,City_458,Frankfurt,Portland,11/24/2024,01/06/2025,2,,None,First,2936077808348410,7/20
+Host459,Host459_pass,First_name_459,Last_name_459,Street_459,City_459,San Francisco,Sydney,11/18/2024,12/16/2024,3,on,Aisle,Business,6727998426546775,5/15
+Host460,Host460_pass,First_name_460,Last_name_460,Street_460,City_460,Sydney,Paris,11/15/2024,12/29/2024,2,on,None,First,6636725659859112,3/2
+Host461,Host461_pass,First_name_461,Last_name_461,Street_461,City_461,Zurich,Paris,11/23/2024,12/22/2024,2,on,Aisle,Coach,6981035388939011,7/26
+Host462,Host462_pass,First_name_462,Last_name_462,Street_462,City_462,Paris,London,12/08/2024,01/04/2025,2,,Window,First,1808116625257359,8/26
+Host463,Host463_pass,First_name_463,Last_name_463,Street_463,City_463,Seattle,San Francisco,12/05/2024,12/21/2024,1,,Aisle,Business,8621703922833086,12/14
+Host464,Host464_pass,First_name_464,Last_name_464,Street_464,City_464,London,Portland,11/23/2024,12/24/2024,3,on,Aisle,Business,9501193018821045,1/17
+Host465,Host465_pass,First_name_465,Last_name_465,Street_465,City_465,Frankfurt,San Francisco,12/10/2024,01/08/2025,1,on,Window,Business,3766749921684773,6/24
+Host466,Host466_pass,First_name_466,Last_name_466,Street_466,City_466,Seattle,Frankfurt,12/07/2024,01/06/2025,2,,Window,First,9050725484650728,7/25
+Host467,Host467_pass,First_name_467,Last_name_467,Street_467,City_467,London,Zurich,11/17/2024,12/27/2024,1,on,None,Coach,2549146874439178,1/24
+Host468,Host468_pass,First_name_468,Last_name_468,Street_468,City_468,Seattle,Sydney,11/14/2024,01/04/2025,1,on,Aisle,Coach,7680813682854662,1/22
+Host469,Host469_pass,First_name_469,Last_name_469,Street_469,City_469,Frankfurt,Paris,11/26/2024,01/07/2025,3,on,None,Business,3415343989938028,9/23
+Host470,Host470_pass,First_name_470,Last_name_470,Street_470,City_470,Portland,San Francisco,12/09/2024,01/02/2025,1,,Aisle,Business,9703157486306267,7/1
+Host471,Host471_pass,First_name_471,Last_name_471,Street_471,City_471,Paris,Denver,11/14/2024,12/13/2024,1,,None,First,9627188252895869,6/18
+Host472,Host472_pass,First_name_472,Last_name_472,Street_472,City_472,Zurich,Seattle,11/19/2024,12/22/2024,1,,None,First,7187927859073533,2/28
+Host473,Host473_pass,First_name_473,Last_name_473,Street_473,City_473,Zurich,Los Angeles,11/15/2024,12/18/2024,1,,None,Business,1696023918553914,2/25
+Host474,Host474_pass,First_name_474,Last_name_474,Street_474,City_474,Portland,Sydney,12/02/2024,01/07/2025,1,on,Aisle,Coach,9240920892760369,12/30
+Host475,Host475_pass,First_name_475,Last_name_475,Street_475,City_475,Los Angeles,Portland,11/24/2024,12/20/2024,1,,None,Business,5622886053712169,12/20
+Host476,Host476_pass,First_name_476,Last_name_476,Street_476,City_476,Paris,Frankfurt,11/14/2024,12/16/2024,2,on,Window,Business,4519594297721065,10/19
+Host477,Host477_pass,First_name_477,Last_name_477,Street_477,City_477,Portland,Sydney,11/23/2024,01/11/2025,3,on,None,First,8650128435890771,5/24
+Host478,Host478_pass,First_name_478,Last_name_478,Street_478,City_478,Los Angeles,London,11/15/2024,12/22/2024,3,on,None,First,2200022416282389,8/8
+Host479,Host479_pass,First_name_479,Last_name_479,Street_479,City_479,Seattle,Paris,12/06/2024,01/07/2025,1,,None,First,6522808167211818,1/18
+Host480,Host480_pass,First_name_480,Last_name_480,Street_480,City_480,Frankfurt,San Francisco,11/17/2024,12/27/2024,3,on,Window,First,4549264245196687,2/25
+Host481,Host481_pass,First_name_481,Last_name_481,Street_481,City_481,San Francisco,Portland,11/27/2024,01/03/2025,2,on,Window,Business,1851177055994218,1/23
+Host482,Host482_pass,First_name_482,Last_name_482,Street_482,City_482,Seattle,Sydney,12/01/2024,12/17/2024,1,on,Aisle,Coach,6599661626288638,10/27
+Host483,Host483_pass,First_name_483,Last_name_483,Street_483,City_483,San Francisco,Denver,11/28/2024,12/14/2024,1,on,None,Coach,2442804213849885,9/23
+Host484,Host484_pass,First_name_484,Last_name_484,Street_484,City_484,Frankfurt,Zurich,11/17/2024,12/24/2024,2,,Window,First,5737315069214331,10/20
+Host485,Host485_pass,First_name_485,Last_name_485,Street_485,City_485,Zurich,San Francisco,11/27/2024,01/08/2025,1,on,None,Business,9553903593870647,8/14
+Host486,Host486_pass,First_name_486,Last_name_486,Street_486,City_486,Denver,Frankfurt,12/01/2024,01/05/2025,2,,Aisle,Coach,9911821298881812,8/20
+Host487,Host487_pass,First_name_487,Last_name_487,Street_487,City_487,Portland,Denver,11/24/2024,01/02/2025,3,,Window,Coach,8994381532345362,5/10
+Host488,Host488_pass,First_name_488,Last_name_488,Street_488,City_488,Sydney,Zurich,12/07/2024,01/09/2025,3,,Aisle,First,0935997362475245,5/25
+Host489,Host489_pass,First_name_489,Last_name_489,Street_489,City_489,San Francisco,Seattle,11/25/2024,12/21/2024,1,on,None,Coach,1771990000905630,12/20
+Host490,Host490_pass,First_name_490,Last_name_490,Street_490,City_490,Denver,Seattle,12/05/2024,01/09/2025,3,on,None,Business,5247579034251546,4/19
+Host491,Host491_pass,First_name_491,Last_name_491,Street_491,City_491,Denver,Paris,12/03/2024,12/26/2024,3,,Aisle,Business,6829176605313591,8/23
+Host492,Host492_pass,First_name_492,Last_name_492,Street_492,City_492,Denver,Frankfurt,11/13/2024,12/27/2024,2,,None,Coach,8857023322858884,5/15
+Host493,Host493_pass,First_name_493,Last_name_493,Street_493,City_493,Seattle,Sydney,12/06/2024,01/04/2025,3,,None,Business,4319178489604181,12/27
+Host494,Host494_pass,First_name_494,Last_name_494,Street_494,City_494,Frankfurt,Sydney,12/08/2024,12/30/2024,1,on,Aisle,Coach,1967507436647799,8/2
+Host495,Host495_pass,First_name_495,Last_name_495,Street_495,City_495,Denver,Frankfurt,11/28/2024,01/05/2025,2,,Aisle,Coach,3372855427120582,12/26
+Host496,Host496_pass,First_name_496,Last_name_496,Street_496,City_496,San Francisco,London,11/23/2024,12/29/2024,3,on,None,First,3699162222743565,2/2
+Host497,Host497_pass,First_name_497,Last_name_497,Street_497,City_497,San Francisco,Zurich,11/28/2024,12/15/2024,1,on,Window,Business,9706576253081781,1/2
+Host498,Host498_pass,First_name_498,Last_name_498,Street_498,City_498,Sydney,Los Angeles,12/04/2024,12/30/2024,3,,Aisle,Coach,8049625384047492,5/18
+Host499,Host499_pass,First_name_499,Last_name_499,Street_499,City_499,Seattle,Portland,11/23/2024,12/22/2024,2,on,Aisle,Business,7648161776526315,6/2
+Host500,Host500_pass,First_name_500,Last_name_500,Street_500,City_500,Seattle,Los Angeles,11/30/2024,12/15/2024,1,,None,First,5301654441669683,2/2
