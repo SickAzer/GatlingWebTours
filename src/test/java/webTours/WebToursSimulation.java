@@ -14,11 +14,12 @@ import static io.gatling.javaapi.http.HttpDsl.*;
 public class WebToursSimulation extends Simulation {
 
     private static final Duration CLICK_THINK_TIME = Duration.ofSeconds(3);
-    private static final Duration FORM_THINK_TIME = Duration.ofSeconds(8);;
-    private static final Duration RAMP_UP_TIME = Duration.ofSeconds(30);;
-    private static final Duration HOLD_LOAD_TIME = Duration.ofSeconds(640);;
-    private static final Duration PACE = Duration.ofSeconds(160);;
-    private static final Duration SCENARIO_LOOP_DURATION = Duration.ofSeconds(2010);;
+    private static final Duration FORM_THINK_TIME = Duration.ofSeconds(8);
+    private static final Duration RAMP_UP_TIME = Duration.ofSeconds(168);
+    private static final Duration HOLD_LOAD_TIME = Duration.ofSeconds(672);
+    private static final Duration PACE = Duration.ofSeconds(168);
+    private static final Duration SCENARIO_LOOP_DURATION = Duration.ofSeconds(2520);
+    private static final Duration MAX_TEST_DURATION = Duration.ofSeconds(2688);
 
     // Протокол
     HttpProtocolBuilder httpProtocol = http
@@ -49,15 +50,19 @@ public class WebToursSimulation extends Simulation {
                     http("/cgi-bin/welcome.pl?signOff=true")
                             .get("/cgi-bin/welcome.pl?signOff=true")
                             .check(
+                                    status().is(200),
                                     substring("A Session ID has been created and" +
                                             " loaded into a cookie called MSO")
                             ),
                     http("/WebTours/home.html")
-                            .get("/WebTours/home.html"),
-
+                            .get("/WebTours/home.html")
+                            .check(
+                                    status().is(200)
+                            ),
                     http("/cgi-bin/nav.pl?in=home")
                             .get("/cgi-bin/nav.pl?in=home")
                             .check(
+                                    status().is(200),
                                     css("[name=\"userSession\"]", "value")
                                             .exists().saveAs("userSession")
                             )
@@ -76,10 +81,14 @@ public class WebToursSimulation extends Simulation {
                     .formParam("JSFormSubmit", "off")
                     .resources(
                             http("/cgi-bin/nav.pl?page=menu&in=home")
-                                    .get("/cgi-bin/nav.pl?page=menu&in=home"),
+                                    .get("/cgi-bin/nav.pl?page=menu&in=home")
+                                    .check(
+                                            status().is(200)
+                                    ),
                             http("/cgi-bin/login.pl?intro=true")
                                     .get("/cgi-bin/login.pl?intro=true")
                                     .check(
+                                            status().is(200),
                                             substring("Don't forget to sign off when\n" +
                                                     "you're done!")
                                     )
@@ -97,9 +106,15 @@ public class WebToursSimulation extends Simulation {
                     .get("/cgi-bin/welcome.pl?page=search")
                     .resources(
                             http("/cgi-bin/reservations.pl?page=welcome")
-                                    .get("/cgi-bin/reservations.pl?page=welcome"),
+                                    .get("/cgi-bin/reservations.pl?page=welcome")
+                                    .check(
+                                            status().is(200)
+                                    ),
                             http("/cgi-bin/nav.pl?page=menu&in=flights")
                                     .get("/cgi-bin/nav.pl?page=menu&in=flights")
+                                    .check(
+                                            status().is(200)
+                                    )
                     )
                     .check(
                             status().is(200),
@@ -193,9 +208,15 @@ public class WebToursSimulation extends Simulation {
                     .get("/cgi-bin/welcome.pl?page=menus")
                     .resources(
                             http("/cgi-bin/login.pl?intro=true")
-                                    .get("/cgi-bin/login.pl?intro=true"),
+                                    .get("/cgi-bin/login.pl?intro=true")
+                                    .check(
+                                            status().is(200)
+                                    ),
                             http("/cgi-bin/nav.pl?page=menu&in=home")
                                     .get("/cgi-bin/nav.pl?page=menu&in=home")
+                                    .check(
+                                            status().is(200)
+                                    )
                     )
                     .check(
                             status().is(200),
@@ -212,6 +233,7 @@ public class WebToursSimulation extends Simulation {
                             http("/cgi-bin/itinerary.pl")
                                     .get("/cgi-bin/itinerary.pl")
                                     .check(
+                                            status().is(200),
                                             css("[name=\"flightID\"]", "value")
                                                     .withDefault("flightID not found")
                                                     .exists()
@@ -219,6 +241,9 @@ public class WebToursSimulation extends Simulation {
                                     ),
                             http("/cgi-bin/nav.pl?page=menu&in=itinerary")
                                     .get("/cgi-bin/nav.pl?page=menu&in=itinerary")
+                                    .check(
+                                            status().is(200)
+                                    )
                     )
                     .check(
                             status().is(200),
@@ -239,7 +264,9 @@ public class WebToursSimulation extends Simulation {
                     .formParam(".cgifields", "1")
                     .check(
                             status().is(200),
-                            substring("No flights have been reserved.")
+                            css("[value=\"#{flightID}\"]", "value")
+                                    .notExists()
+
                     )
     );
 
@@ -250,9 +277,15 @@ public class WebToursSimulation extends Simulation {
                     .get("/cgi-bin/welcome.pl?signOff=1")
                     .resources(
                             http("/WebTours/home.html")
-                                    .get("/WebTours/home.html"),
+                                    .get("/WebTours/home.html")
+                                    .check(
+                                            status().is(200)
+                                    ),
                             http("/cgi-bin/nav.pl?in=home")
                                     .get("/cgi-bin/nav.pl?in=home")
+                                    .check(
+                                            status().is(200)
+                                    )
                     )
                     .check(
                             status().is(200),
@@ -292,8 +325,9 @@ public class WebToursSimulation extends Simulation {
                         rampConcurrentUsers(44).to(88).during(RAMP_UP_TIME),
                         constantConcurrentUsers(88).during(HOLD_LOAD_TIME),
                         rampConcurrentUsers(88).to(132).during(RAMP_UP_TIME),
-                        constantConcurrentUsers(132).during(HOLD_LOAD_TIME)
+                        constantConcurrentUsers(132).during(HOLD_LOAD_TIME),
+                        rampConcurrentUsers(132).to(0).during(RAMP_UP_TIME)
                 ).protocols(httpProtocol)
-        );
+        ).maxDuration(MAX_TEST_DURATION);
     }
 }
