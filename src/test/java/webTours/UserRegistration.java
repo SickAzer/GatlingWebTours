@@ -38,16 +38,31 @@ public class UserRegistration extends Simulation {
                                             .get("/webtours/")
                                             .resources(
                                                     http("request_1")
-                                                            .get("/webtours/header.html"),
+                                                            .get("/webtours/header.html")
+                                                            .check(
+                                                                    status().is(200)
+                                                            ),
                                                     http("request_2")
-                                                            .get("/cgi-bin/welcome.pl?signOff=true"),
+                                                            .get("/cgi-bin/welcome.pl?signOff=true")
+                                                            .check(
+                                                                    status().is(200)
+                                                            ),
                                                     http("request_3")
-                                                            .get("/cgi-bin/nav.pl?in=home"),
+                                                            .get("/cgi-bin/nav.pl?in=home")
+                                                            .check(
+                                                                    status().is(200)
+                                                            ),
                                                     http("request_4")
                                                             .get("/WebTours/home.html")
+                                                            .check(
+                                                                    status().is(200)
+                                                            )
                                             ),
                                     http("request_5")
-                                            .get("/cgi-bin/login.pl?username=&password=&getInfo=true"),
+                                            .get("/cgi-bin/login.pl?username=&password=&getInfo=true")
+                                            .check(
+                                                    status().is(200)
+                                            ),
                                     http("request_6")
                                             .post("/cgi-bin/login.pl")
                                             .formParam("username", "#{userName}")
@@ -60,23 +75,39 @@ public class UserRegistration extends Simulation {
                                             .formParam("register.x", "72")
                                             .formParam("register.y", "11")
                                             .check(
+                                                    status().is(200),
                                                     substring("Thank you, <b>#{userName}</b>, for registering")
                                             ),
                                     http("request_7")
                                             .get("/cgi-bin/welcome.pl?page=menus")
                                             .resources(
                                                     http("request_8")
-                                                            .get("/cgi-bin/nav.pl?page=menu&in=home"),
+                                                            .get("/cgi-bin/nav.pl?page=menu&in=home")
+                                                            .check(
+                                                                    status().is(200)
+                                                            ),
                                                     http("request_9")
                                                             .get("/cgi-bin/login.pl?intro=true")
+                                                            .check(
+                                                                    status().is(200)
+                                                            )
+                                            )
+                                            .check(
+                                                    status().is(200)
                                             ),
                                     http("Sign_Off")
                                             .get("/cgi-bin/welcome.pl?signOff=1")
                                             .resources(
                                                     http("/WebTours/home.html")
-                                                            .get("/WebTours/home.html"),
+                                                            .get("/WebTours/home.html")
+                                                            .check(
+                                                                    status().is(200)
+                                                            ),
                                                     http("/cgi-bin/nav.pl?in=home")
                                                             .get("/cgi-bin/nav.pl?in=home")
+                                                            .check(
+                                                                    status().is(200)
+                                                            )
                                             )
                                             .check(
                                                     status().is(200),
